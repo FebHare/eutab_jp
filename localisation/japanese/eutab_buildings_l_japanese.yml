@@ -1,0 +1,151 @@
+﻿l_japanese:
+
+ ########################
+ ### SHARED BUILDINGS ###
+ ########################
+
+ ### UNIVERSAL ###
+ building_eutab_support_lab: "$tech_eutab_support_lab$"
+ building_eutab_support_lab_desc: "$tech_eutab_support_lab_desc$"
+ building_eutab_battle_praxeum: "$tech_eutab_battle_praxeum$"
+ building_eutab_battle_praxeum_desc: "$tech_eutab_battle_praxeum_desc$"
+
+ ### NON-GESTALT ###
+ building_eutab_dev_district: "辺境の定住地"
+ building_eutab_dev_district_plural: "$building_eutab_dev_district$"
+ building_eutab_dev_district_desc: "['concept_eutab_developmental_structure']\n\nこの世界に我々の生き方を広めるための基盤。"
+ building_eutab_gaia_district: "$tech_eutab_gaia_district$"
+ building_eutab_gaia_district_desc: "$tech_eutab_gaia_district_desc$"
+ building_eutab_hydroponics_tower: "水耕栽培タワー"
+ building_eutab_hydroponics_tower_desc: "現地POPが消費する栄養豊かな食料を供給する塔型の庭園。"
+ building_eutab_grand_hall_justice: "大司法館"
+ building_eutab_grand_hall_justice_desc: "$building_eutab_grand_hall_justice$は、人口の多い惑星の司法省本部ビルだ。"
+ building_eutab_foundation_institute: "$tech_eutab_foundation_institute$"
+ building_eutab_foundation_institute_desc: "$tech_eutab_foundation_institute_desc$"
+
+ ### GESTALT ###
+ building_eutab_geothermal_tap: "地熱タップ"
+ building_eutab_geothermal_tap_desc: "膨大なエネルギーを得るために惑星の中心核からの放熱を活用する、深い掘削抗。"
+ building_eutab_geothermal_tap_effect: "\n現在の施設レベル：§Y[eutab_geothermal_tap_infrastructure_level_loc]§!\n\n§Y施設レベル§!ごとに：:\n$t$§G+10§! $r_energy$を産出する\n$t$$mod_planet_technician_energy_produces_add$：§G+0.25§!\n$t$$MOD_POP_ENVIRONMENT_TOLERANCE$：§R-10%§!"（ないし$mod_planet_jobs_upkeep_mult$：§R+2.5%§!）"
+ building_eutab_hypercomputing_complex: "ハイパーコンピューティング施設"
+ building_eutab_hypercomputing_complex_desc: "$tech_eutab_hypercomputing_complex_desc$"
+
+ ################################
+ ### ETHOS-SPECIFIC BUILDINGS ###
+ ################################
+
+ ### AUTHORITARIAN ###
+ building_eutab_interior_ministry: "内務省"
+ building_eutab_interior_ministry_desc: "['concept_eutab_developmental_structure']\n\n内務省は、基本的に、警察活動や緊急事態管理や国家安全保障や登記や地方政府の監督を担当する。"
+ building_eutab_imperial_residence: "宮殿"
+ building_eutab_imperial_residence_desc: "['concept_eutab_developmental_structure']\n\nこの世界の支配王朝の主要な$building_eutab_imperial_residence$であり、惑星総督の公邸と職場も兼ねている。"
+ building_eutab_shroud_ministry: "シュラウド省"
+ building_eutab_shroud_ministry_desc: "['concept_eutab_developmental_structure']\n\nシュラウド省は、現地のテレパスの支援を受けながら、惑星内部のあらゆる問題を管理している。"
+ building_eutab_imperial_seat: "帝都"
+ building_eutab_imperial_seat_desc: "['concept_eutab_developmental_structure']\n\n惑星と帝国の支配者一族と超能力者が統合された広大な政府施設。"
+ # BMC = Bureau of Moral Codes（道徳規定省）
+ building_eutab_moral_codes: "道規省審査室"
+ building_eutab_moral_codes_desc: "この建物は、この惑星の$tech_eutab_moral_codes$の神経中枢であり、全ての資源を国家の厳格な道徳基準に従わせている。"
+
+ ### EGALITARIAN ###
+ building_eutab_planetary_parliament: "惑星議会"
+ building_eutab_planetary_parliament_desc: "['concept_eutab_developmental_structure']\n\n$tech_eutab_planetary_parliament_desc$"
+ building_eutab_adaptation_lab: "植民地適応研究所"
+ building_eutab_adaptation_lab_desc: "我々の民が星の彼方で予期せぬ困難を生き抜くのを支援するための、特殊な中央研究所。"
+
+ ### XENOPHOBE ###
+ building_eutab_xeno_adaptation: "異星種族適応施設"
+ building_eutab_xeno_adaptation_desc: "['concept_eutab_developmental_structure']\n\n$tech_eutab_xeno_adaptation_desc$"
+ building_eutab_purity_centre: "浄化センター"
+ building_eutab_purity_centre_desc: "['concept_eutab_developmental_structure']\n\n市民はこの施設を利用してコロニーでの生活をより快適にできる。"
+ building_eutab_expo_guard: "予備警備隊の基地"
+ building_eutab_expo_guard_desc: "['concept_eutab_developmental_structure']\n\n予備警備隊の駐留施設。"
+ building_eutab_xeno_sub_ins: "異星人服従機関"
+ building_eutab_xeno_sub_ins_desc: "生きた被検体に対してここで行われている研究により、遭遇した種族のそれぞれの細かい違いがわかるだろう。その限界と心理がわかれば、民衆のために最大限に活用できるようになる。"
+ building_eutab_xeno_sub_ins_slave_effect: "§Y$slave_colony$§!で建設されたら：\n　§Y50§! POPごとに£job_eutab_anthro£ $job_eutab_anthro$の職業枠§G+1§!\n　£pop_cat_slave£ $pop_cat_slave_plural$からの£physics£ £society£ £engineering£ $research$：§G+50%§!"
+
+ ### XENOPHILE ###
+ building_eutab_xeno_district: "異星文化地区"
+ building_eutab_xeno_district_desc: "['concept_eutab_developmental_structure']\n\n$tech_eutab_xeno_district_desc$"
+ building_eutab_medigel_cultivator: "メディゲル培養室"
+ building_eutab_medigel_cultivator_desc: "帝国に供給するのに十分な量のメディゲルを培養し、余剰分の輸出を可能とするための専用の培養室。"
+ building_eutab_ins_exo_design: "$tech_eutab_ins_exo_design$"
+ building_eutab_ins_exo_design_desc: "$tech_eutab_ins_exo_design_desc$"
+ building_eutab_ins_exo_design_effect: "\n§Y10～15年ごとに：§!\n$t$ランダムな£research£ §Y研究選択肢§!を一つ（あるいは£physics£ £society£ £engineering£ §Y$research$ポイント§!を）得る"
+
+ ### MILITARIST ###
+ building_eutab_wargame: "ウォーゲーム・コロシアム"
+ building_eutab_wargame_desc: "['concept_eutab_developmental_structure']\n\n$tech_eutab_wargame_desc$"
+ building_eutab_warlink_colosseum: "$tech_eutab_warlink_colosseum$"
+ building_eutab_warlink_colosseum_desc: "['concept_eutab_developmental_structure']\n\n軍団が、娯楽と見世物のために、毎週ここで作られては破壊されている。本当の戦争がこの世界を脅かすことになれば、これらは熱心に戦うだろう。"
+
+ ### PACIFIST ###
+ building_eutab_eco_preserve: "環境保護区"
+ building_eutab_eco_preserve_desc: "$tech_eutab_eco_preserve_desc$"
+ building_eutab_genetic_data_vault: "['concept_eutab_developmental_structure']\n\n遺伝子データの保管庫"
+ building_eutab_genetic_data_vault_desc: "$tech_eutab_genetic_data_vault_desc$"
+ building_eutab_afterlife_vault: "死後の人生の保管庫"
+ building_eutab_afterlife_vault_desc: "故人の心がいつまでも生き続ける安全な保管庫。多少ながらも我々の研究に協力してくれる人もいる。"
+
+ ### MATERIALIST ###
+ building_eutab_arcology: "都市アーコロジー"
+ building_eutab_arcology_desc: "['concept_eutab_developmental_structure']\n\n$tech_eutab_arcology_desc$"
+ building_eutab_comp_arcology: "コンピュータ・アーコロジー"
+ building_eutab_comp_arcology_desc: "['concept_eutab_developmental_structure']\n\nアーコロジーの大部分は、最先端のコンピューティング技術に使われたり一体化したりしている。この構造は、サイバネティック市民と最も洗練された機械が使用する専用のサーバーと居住空間として機能する。"
+ building_eutab_adv_clone_vats: "クローン施設"
+ building_eutab_adv_clone_vats_desc: "手足の高速再生、記憶や経験の埋め込み、特注クローン、その他多くのサービスを提供できる最先端のクローン施設。"
+
+ ### SPIRITUALIST ###
+ building_eutab_monument_unity: "惑星降臨の聖地"
+ building_eutab_monument_unity_desc: "['concept_eutab_developmental_structure']\n\n$tech_eutab_monument_unity_desc$"
+ building_eutab_symbol_unity: "統合の象徴"
+ building_eutab_symbol_unity_desc: "この聖なる神殿は神性の象徴として掲げられ、我が国の敬虔な信者を鼓舞するとともにその魂を統合している。"
+
+ ### HIVE-MIND ###
+ eutab_hive_building_organic_world_synergy_effect: "\n§Y$pc_hive$§!（あるいはそれに類似する惑星）で建設されたら："
+ eutab_hive_building_mindweb_complexity_effect: "\nこの建造物の$COUNTRY_MODIFIERS$の一部は['concept_eutab_mindweb_efficiency']の影響を受ける"
+
+ building_eutab_spawning_garden: "繁殖園"
+ building_eutab_spawning_garden_desc: "できるだけ多くのドローンを成熟させるために、慎重に管理された繁殖プール。"
+ building_eutab_beta_node: "ハイブ・ベータノード"
+ building_eutab_beta_node_desc: "巨大な星間精神網を維持する、有機的な神経の成長による生きた構造物。"
+ building_eutab_beta_node_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n$MOD_PLANET_STABILITY_ADD$：§G+2.5§!"
+ building_eutab_hive_alpha_node: "ハイブ・アルファノード"
+ building_eutab_hive_alpha_node_desc: "この惑星地殻内で、神経ネットワークの主要な成長点が出現する。その内部では、数百メートルもの生体結晶構造が成長している。.\n§Eこのノードは二つの副ノードを持てる。§!"
+ building_eutab_hive_alpha_node_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n$MOD_PLANET_STABILITY_ADD$：§G+5§!"
+ building_eutab_hive_node_support: "現地拡張ノード"
+ building_eutab_hive_node_support_desc: "特化する前の現地活動を支援するための試作補助ニューロンノード・クラスター。"
+ building_eutab_hive_node_support_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n$MOD_PLANET_BUILDING_BUILD_SPEED_MULT$：§G+10%§!\n$MOD_PLANET_DECISION_ENACT_SPEED_MULT$：§G+7.5%§!"
+# building_eutab_hive_node_research_phy: "研究ノード"
+# building_eutab_hive_node_research_phy_desc: "研究を行うための補助ニューロンノード・クラスター。"
+ building_eutab_hive_node_research: "研究ノード"
+ building_eutab_hive_node_research_desc: "研究を行うための補助ニューロンノード・クラスター。"
+ building_eutab_hive_node_research_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n§Y33§! POPごとに£job_brain_drone£ $job_brain_drone$の職業枠§G+1§"
+ building_eutab_hive_node_research_mindweb_tooltip: "$eutab_hive_building_mindweb_complexity_effect$\n現在の$mod_eutab_mindweb_complexity_scientific_add$：§Y[owner.eutab_mindweb_complexity_scientific_loc]§!\n現在の科学$concept_eutab_mindweb_efficiency$：§Y[owner.eutab_mindweb_efficiency_scientific_loc]%§!"
+ building_eutab_hive_node_stars: "星間制御ノード"
+ building_eutab_hive_node_stars_desc: "深宇宙施設の管理を支援するための補助ニューロンノード・クラスター。"
+ building_eutab_hive_node_stars_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n$mod_job_soldier_stability_add$：§G+0.25§!\n$mod_planet_soldiers_unity_produces_add$：§G+0.25§!"
+ building_eutab_hive_node_stars_mindweb_tooltip: "$eutab_hive_building_mindweb_complexity_effect$\n現在の$mod_eutab_mindweb_complexity_martial_add$：§Y[owner.eutab_mindweb_complexity_martial_loc]§!\n現在の軍事$concept_eutab_mindweb_efficiency$：§Y[owner.eutab_mindweb_efficiency_martial_loc]%§!"
+ building_eutab_hive_node_manage: "ドローン指令ノード"
+ building_eutab_hive_node_manage_desc: "ドローンの管理を支援するための補助ニューロンノード・クラスター。"
+ building_eutab_hive_node_manage_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n§Y33§! POPごとに$job_eutab_caretaker$の職業枠§G+1§\n$mod_planet_eutab_caretaker_unity_upkeep_add$：§G-0.5§!\n$mod_planet_eutab_caretaker_energy_upkeep_add$：§G-1§!"
+ building_eutab_hive_node_mega: "深宇宙調整ノード"
+ building_eutab_hive_node_mega_desc: "大規模な建設作業を調整するための補助ニューロンノード・クラスター。"
+ building_eutab_hive_node_mega_organic_synergy_effect: "$eutab_hive_building_organic_world_synergy_effect$\n$mod_planet_metallurgists_produces_mult$：§G+25%§!\n$mod_planet_metallurgists_upkeep_mult$：§R+25%§!"
+ building_eutab_hive_node_mega_mindweb_tooltip: "$eutab_hive_building_mindweb_complexity_effect$\n現在の$mod_eutab_mindweb_complexity_industrial_add$：§Y[owner.eutab_mindweb_complexity_industrial_loc]§!\n現在の産業$concept_eutab_mindweb_efficiency$：§Y[owner.eutab_mindweb_efficiency_industrial_loc]%§!"
+
+ ### MACHINE INTELLIGENCE ###
+ building_eutab_automation_sector: "自動部門"
+ building_eutab_automation_sector_desc: "既存機の製造や改造を支援する自動センター。"
+ building_eutab_preservation_nexus: "保存ネクサス"
+ building_eutab_preservation_nexus_desc: "交換部品や修理品の追跡・配送を行う物流管理スーパーセンター。"
+ building_eutab_dm_energy: "ダークマター滅却装置"
+ building_eutab_dm_energy_desc: "備蓄ダークマターはシールドで防護された封止空間に注入されるが、破損を避けるためにシールド自体を慎重に管理維持しなければならない。計算量は膨大で、地殻と上部マントルの処理時間から低遅延で大量の応答が必要となる。従って、共有プロセスへの影響を避けるため、機械惑星の半球あたり一つだけしか設置できない。"
+ building_eutab_dm_siphon: "微小特異点吸入"
+ building_eutab_dm_siphon_desc: "高密度の粒子加速器は、特殊な素材の合金が使われているため微小な特異点を維持可能で、それの操作によって生のダークマターを吸い出すことができる。こうした処理は、完璧にバランスの取れた質量を維持するために、冗長性システムと積極的監視（それらがないと想定外の作用によって星系が滅ぶかもしれない）に大きく依存している。"
+ building_eutab_dm_forge: "重力電磁溶鉱炉"
+ building_eutab_dm_forge_desc: "機械世界のマントルに組み込まれた重力電磁安定装置を再集束させ、基本鉱物の迅速かつ高効率な合金化を促進する。安定装置の配置に条件があるため、施設は安定装置の真上に設置しなければならないが、世界の発展とともに変化するかもしれない。"
+ building_eutab_dm_comp: "認知分配コア"
+ building_eutab_dm_comp_desc: "我々のアイデンティティに取り込まれた副人格や資源の管理や維持を行う中枢コアで、人口増加に伴うユニットの追加展開が容易にできる設計になっている。"
+ building_eutab_dm_molecular_synchronizer: "分子同期装置"
+ building_eutab_dm_molecular_synchronizer_desc: "この構造物は、惑星全土で活動する採掘ドローンの巨大ネットワークの神経中枢となり、それらのサブルーチンを管理して段違いの効率で資源を割り当てる。そのモジュール型設計のため、資源の需要増大に応じて追加のドローンユニットをシームレスに統合できるため、惑星規模の採掘活動において不可欠な資産となる。" #PM: Thanks ChatGPT

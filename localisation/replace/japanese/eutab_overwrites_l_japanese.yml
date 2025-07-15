@@ -1,0 +1,5 @@
+﻿l_japanese:
+
+ TECH_IS_CUSTOM_TECH_1: "§E志向固有のテクノロジー§!"
+
+ tr_genetics_efficient_cloning_desc: "§Y$building_clone_vats$§!と§Y$building_eutab_adv_clone_vats$§!は追加で§G+1.5§! §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§!を産出する。"
