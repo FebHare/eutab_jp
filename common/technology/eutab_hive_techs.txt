@@ -1,0 +1,481 @@
+# Ethos Unique Techs and Buildings
+# Created by Dumuzii
+
+###################################
+### HIVE UNIQUE TECHS - GENERAL ###
+###################################
+# Breed Efficiency Characteristics 1
+tech_eutab_breed_t1 = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	is_custom_tech_1 = yes
+	category = { biology }
+	prerequisites = { "tech_colonization_1" }
+	weight = @tier2weight1
+	potential = { is_hive_empire = yes }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.025
+		planet_pops_upkeep_mult = -0.05
+	}
+}
+
+# Breed Efficiency Characteristics 2
+tech_eutab_breed_t2 = {
+	cost = @tier3cost1
+	area = society
+	tier = 2
+	is_custom_tech_1 = yes
+	category = { biology }
+	prerequisites = { "tech_eutab_breed_t1" }
+	weight = @tier3weight1
+	potential = { is_hive_empire = yes }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.025
+		planet_pops_upkeep_mult = -0.05
+	}
+}
+
+# Breed Efficiency Characteristics 3
+tech_eutab_breed_t3 = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	is_custom_tech_1 = yes
+	category = { biology }
+	prerequisites = { "tech_eutab_breed_t2" }
+	weight = @tier3weight3
+	potential = { is_hive_empire = yes }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.025
+		planet_pops_upkeep_mult = -0.05
+	}
+}
+
+# Breed Efficiency Characteristics 4
+tech_eutab_breed_t4 = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	is_custom_tech_1 = yes
+	category = { biology }
+	prerequisites = { "tech_eutab_breed_t3" }
+	weight = @tier4weight1
+	potential = { is_hive_empire = yes }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.025
+		planet_pops_upkeep_mult = -0.05
+	}
+}
+
+# Unlocks Spawning Garden
+tech_eutab_spawning_garden = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	is_custom_tech_1 = yes
+	category = { biology }
+	prerequisites = {
+		"tech_autonomous_agents"
+		"tech_collective_production_methods"
+	}
+	weight = @tier3weight3
+	potential = { is_hive_empire = yes }
+	prereqfor_desc = {
+		custom = {
+			title = EUTAB_SPAWNING_UPGRADE_TITLE
+			desc = eutab_not_independant_building
+		}
+	}
+}
+
+#####################################################
+## HIVE FOCUS EDICTS
+#####################################################
+
+# Unlocks Hive Population Edict
+tech_eutab_hivee_pop = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	is_custom_tech_1 = yes
+	category = { biology }
+	prerequisites = { "tech_autonomous_agents" }
+	weight = @tier2weight2
+	potential = { is_hive_empire = yes }
+}
+
+# Unlocks Hive Research Edict
+tech_eutab_hivee_research = {
+	cost = @tier3cost2
+	area = physics
+	tier = 3
+	is_custom_tech_1 = yes
+	category = { computing }
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_self_aware_logic"
+		"tech_eutab_hivee_pop"
+	}
+	weight = @tier3weight2
+	potential = { is_hive_empire = yes }
+}
+
+# Unlocks unity edict
+tech_eutab_hive_complex = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { statecraft }
+	prerequisites = {
+		"tech_eutab_hivee_research"
+		"tech_unity_of_purpose"
+	}
+	weight = @tier4weight3
+	is_custom_tech_1 = yes
+	potential = { is_hive_empire = yes }
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	weight_modifier = {
+	}
+	ai_weight = {
+	}
+}
+
+#####################################################
+## HIVE UNIQUE TECHS  - PERK REQUIREMENT
+#####################################################
+#Introspective Studies
+tech_eutab_h_introspec_studies = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { psionics }
+	prerequisites = { "tech_galactic_ambitions" }
+	weight = @tier4weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_one_vision
+	}
+	modifier = {
+		country_base_influence_produces_add = 2
+		country_unity_produces_mult = 0.05
+	}
+}
+
+#Streamline Drone Redistribution
+tech_eutab_h_drone_redist = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_starbase_3" }
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_imperial_prerogative
+	}
+	modifier = {
+		pop_resettlement_cost_mult = -0.4
+	}
+}
+
+#Advance the Brain Caste
+tech_eutab_h_brain_caste = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { biology }
+	prerequisites = { "tech_global_research_initiative" }
+	weight = @tier3weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_technological_ascendancy
+	}
+	modifier = {
+		# planet_researchers_physics_research_produces_add = 1
+		# planet_researchers_society_research_produces_add = 1
+		# planet_researchers_engineering_research_produces_add = 1
+		planet_physicists_physics_research_produces_add = 1
+		planet_biologists_society_research_produces_add = 1
+		planet_engineers_engineering_research_produces_add = 1
+	}
+}
+
+#New Drone Intergration
+tech_eutab_h_new_drone = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { biology }
+	prerequisites = { "tech_gene_banks" }
+	weight = @tier3weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		eutab_has_nihilistic_acquisition_or_similar = yes
+	}
+	modifier = {
+		pop_amenities_usage_no_happiness_mult = -0.15
+	}
+}
+
+#Navigatior Drones
+tech_eutab_h_nav_drones = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_jump_drive_1" }
+	weight = @tier4weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_galactic_wonders = yes
+	}
+	modifier = {
+		ship_windup_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 0.2
+		ship_emergency_ftl_mult = -0.2
+	}
+}
+
+#Hazard Drones
+tech_eutab_h_hazard_drones = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = { "tech_gene_tailoring" }
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_hive_worlds
+	}
+	modifier = {
+		terraform_speed_mult = 0.25
+		pop_amenities_usage_mult = -0.15
+	}
+}
+
+#Optimised Growth Hormones
+tech_eutab_h_optimise_growth = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = { "tech_genome_mapping" }
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_galactic_force_projection
+	}
+	modifier = {
+		country_leader_cap_add = 2
+	}
+}
+
+#Builder Broods
+tech_eutab_h_builder_broods = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = { "tech_mega_engineering" }
+	weight = @tier4weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_master_builders
+	}
+	modifier = {
+		planet_metallurgists_alloys_produces_add = 1
+		starbase_upgrade_speed_mult = 0.33
+	}
+}
+
+#Direct Governance
+tech_eutab_h_direct_governance = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { biology }
+	prerequisites = {
+		"tech_eutab_breed_t3"
+		"tech_autonomous_agents"
+	}
+	weight = @tier3weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_executive_vigor
+	}
+	modifier = {
+		leader_officials_cost_mult = -0.75
+		country_official_cap_add = 1
+	}
+}
+
+#Strain Cultivation Tanks
+tech_eutab_h_strain_cult_tank = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = { "tech_eutab_spawning_garden" }
+	weight = @tier4weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_engineered_evolution
+	}
+	modifier = {
+		country_society_tech_research_speed = 0.1
+		category_biology_research_speed_mult = 0.1
+	}
+}
+
+#############################
+## HIVE SYNAPSE PERK TECHS ##
+#############################
+# Beta Node Tech
+# Unlocks beta node building
+tech_eutab_h_beta_node = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { biology }
+	weight = @tier2weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		eutab_has_gene_banks_or_skip = yes
+	}
+	ai_weight = {
+		factor = 20 # Important tech
+	}
+}
+
+# Controlled Neural Growth Techniques - Alpha node and Aux node unlock
+tech_eutab_hive_alpha_node = {
+	cost = @tier5cost1
+	area = society
+	tier = 5
+	is_custom_tech_1 = yes
+	category = { biology }
+	weight = 0
+	potential = { is_hive_empire = yes }
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EUTAB_ALPHA_NODE_TITLE"
+			desc = "TECH_UNLOCK_EUTAB_ALPHA_NODE_DESC"
+		}
+	}
+	ai_weight = {
+		factor = 25 # Very important tech
+	}
+}
+
+#Structural Research Nodes - Research node unlock
+tech_eutab_hive_node_research = {
+	cost = @tier3cost2
+	area = physics
+	tier = 3
+	category = { computing }
+	prerequisites = { "tech_eutab_hive_alpha_node" }
+	weight = @tier3weight2
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_eutab_mind_matter
+		OR = {
+			has_ascension_perk = ap_transcendent_learning
+			has_ascension_perk = ap_technological_ascendancy
+			has_ascension_perk = ap_enigmatic_engineering
+		}
+	}
+}
+
+#Structural Remote Focus - Starbase node
+tech_eutab_hive_node_stars = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_eutab_hive_alpha_node" }
+	weight = @tier3weight2
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_eutab_mind_matter
+		OR = {
+			has_ascension_perk = ap_grasp_the_void
+			has_ascension_perk = ap_eternal_vigilance
+			has_ascension_perk = ap_galactic_force_projection
+		}
+	}
+}
+
+#Social Cohesion Focus - population node
+tech_eutab_hive_node_manage = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = { "tech_eutab_hive_alpha_node" }
+	weight = @tier3weight2
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_eutab_mind_matter
+		OR = {
+			has_ascension_perk = ap_executive_vigor
+			has_ascension_perk = ap_one_vision
+			has_ascension_perk = ap_imperial_prerogative
+		}
+	}
+}
+
+# Grand Mobilisation Focus - megastructure node
+tech_eutab_hive_node_mega = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { materials }
+	prerequisites = { "tech_eutab_hive_alpha_node" }
+	weight = @tier3weight2
+	is_custom_tech_1 = yes
+	potential = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_eutab_mind_matter
+		OR = {
+			eutab_has_voidborne_or_similar = yes
+			has_ascension_perk = ap_master_builders
+			has_galactic_wonders = yes
+		}
+	}
+	ai_weight = {
+		factor = 25
+	}
+}
+
+# Neural Mass Cultivation AI Helper
+tech_eutab_hive_ai_ap_helper = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	weight = 0
+	is_custom_tech_1 = yes
+	icon = old_tech_icons/tech_xeno_relations
+	potential = {
+		is_ai = yes
+		has_ascension_perk = ap_eutab_mind_matter
+	}
+}

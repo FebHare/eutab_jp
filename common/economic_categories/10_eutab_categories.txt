@@ -1,0 +1,41 @@
+# This file's name must be after "02_pop_categories_categories.txt". Otherwise, "Failed to read key reference planet_researchers from database" occurs.
+planet_eutab_master_bio = {
+	parent = planet_researchers # planet_jobs_productive
+	modifier_category = pop_job
+}
+
+planet_eutab_minor_noble = {
+	parent = planet_bureaucrats #planet_jobs_productive
+	modifier_category = pop_job
+}
+
+planet_eutab_gladiator = {
+	parent = planet_entertainers #planet_jobs_productive
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		produces
+	}
+}
+
+planet_eutab_anthro = {
+	parent = planet_researchers # planet_jobs_productive
+	modifier_category = pop_job
+}
+
+planet_eutab_ranger = {
+	parent = planet_culture_workers #planet_jobs_productive
+	modifier_category = pop_job
+}
+
+planet_eutab_siphon = {
+	parent = planet_jobs_productive
+	modifier_category = pop_job
+}
+
+planet_eutab_caretaker = {
+	parent = planet_bureaucrats #planet_jobs_productive
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		upkeep
+	}
+}

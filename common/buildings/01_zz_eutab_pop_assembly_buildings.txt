@@ -1,0 +1,516 @@
+#############
+# Machine buildings
+#############
+
+building_machine_assembly_complex = {
+	base_buildtime = @b3_time
+	can_build = no
+
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_individual_machine = yes
+			}
+		}
+		NOR = {
+			has_modifier = gestation_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	convert_to = {
+		building_robot_assembly_complex
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_robot_empire = no
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	inline_script = {
+		script = jobs/roboticist_add
+		AMOUNT = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					is_machine_empire = yes
+					is_individual_machine = yes
+				}
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 400
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_mega_assembly
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+			}
+		}
+		text = job_roboticist_individual_machine_effect_desc
+	}
+	#eutab
+	upgrades = {
+		building_eutab_automation_sector # EUTAB
+	}
+}
+
+#############
+# Hive buildings
+#############
+
+building_spawning_pool = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+
+	category = pop_assembly
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_wilderness_empire = no
+			NOT = { has_origin = origin_progenitor_hive }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = no
+				has_origin = origin_progenitor_hive
+			}
+		}
+	}
+
+	inline_script = {
+		script = jobs/spawning_drone_add
+		AMOUNT = @building_static_jobs_low
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_synaptic_sub_processing }
+		}
+		modifier = {
+			job_augmentor_drone_add = 200
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	convert_to = {
+		building_offspring_nest
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_cybernetics_synaptic_sub_processing
+			}
+		}
+		text = job_augmentor_drone_assembly_desc
+	}
+
+	triggered_desc = {
+		text = spawning_pool_tooltip
+	}
+
+	#eutab
+	upgrades = {
+		building_eutab_spawning_garden # EUTAB
+	}
+}
+
+#############
+# Clone vats
+#############
+
+building_clone_vats = {
+	base_buildtime = @b1_time
+
+	category = pop_assembly
+
+	planet_limit = {
+		base = 1
+		modifier = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cloning_finish
+			}
+			has_upgraded_capital = yes
+			add = 1
+		}
+		modifier = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cloning_finish
+			}
+			has_major_upgraded_capital = yes
+			add = 1
+		}
+		modifier = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cloning_finish
+			}
+			has_fully_upgraded_capital = yes
+			add = 1
+		}
+	}
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			owner = {
+				has_cloning_tradition = no
+			}
+		}
+		bonus_pop_growth = 1.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_cloning_tradition = no
+			}
+		}
+		fake_pop_growth_mod = 1.5
+	}
+
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			owner = {
+				has_cloning_tradition = yes
+				NOT = {
+					has_tradition = tr_genetics_efficient_cloning
+				}
+			}
+		}
+		bonus_pop_growth = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_cloning_tradition = yes
+				NOT = {
+					has_tradition = tr_genetics_efficient_cloning
+				}
+			}
+		}
+		fake_pop_growth_mod = 3
+	}
+
+	triggered_planet_pop_group_modifier_for_all = {
+		potential = {
+			owner = {
+				has_cloning_tradition = yes
+				has_tradition = tr_genetics_efficient_cloning
+			}
+		}
+		bonus_pop_growth = 4.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_cloning_tradition = yes
+				has_tradition = tr_genetics_efficient_cloning
+			}
+		}
+		fake_pop_growth_mod = 4.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = clone_army_full_potential
+				has_active_tradition = tr_cloning_adopt_clone_army
+			}
+		}
+		clone_soldiers_sustained = @clones_sustained_low
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = clone_army_full_potential
+				has_active_tradition = tr_cloning_finish_clone_army
+			}
+		}
+		clone_soldiers_sustained = @clones_sustained_low
+	}
+
+	resources = {
+		category = planet_buildings_clone_vats
+
+		# Base cost
+		cost = {
+			minerals = 500
+		}
+		# Org/Lith cost
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 500
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			energy = 500
+		}
+
+		# Base upkeep
+		upkeep = {
+			energy = 2
+		}
+		# Org/Lith upkeep
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+				}
+			}
+			food = 15
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+					has_cloning_tradition = yes
+				}
+			}
+			food = 15
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+					has_cloning_tradition = yes
+				}
+			}
+			food = 15
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			minerals = 15
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			minerals = 15
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_cloning_authority = yes
+				is_megacorp = yes
+			}
+		}
+		planet_jobs_trade_produces_mult = @replicatory_association_trade_mult
+		planet_amenities_add = @replicatory_association_amenities_add
+	}
+
+	prerequisites = {
+		tech_cloning
+	}
+
+	#eutab
+	upgrades = {
+		building_eutab_adv_clone_vats # EUTAB
+	}
+}
