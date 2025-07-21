@@ -39,8 +39,7 @@ building_eutab_dev_district = {
 		pop_amenities_usage_mult = -0.1
 		job_clerk_add = 200
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -892,8 +891,7 @@ building_eutab_interior_ministry = {
 		job_clerk_per_pop = 0.05
 		job_bureaucrat_per_pop = 0.02
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -970,8 +968,7 @@ building_eutab_shroud_ministry = {
 		job_clerk_per_pop = 0.05
 		job_bureaucrat_per_pop = 0.025
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1044,8 +1041,7 @@ building_eutab_imperial_residence = {
 		job_eutab_minor_noble_add = 400
 		job_eutab_minor_noble_per_pop = 0.04
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1117,8 +1113,7 @@ building_eutab_imperial_seat = {
 		job_eutab_minor_noble_per_pop = 0.05
 		job_eutab_shroud_lord_add = 200
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1240,8 +1235,7 @@ building_eutab_planetary_parliament = {
 		planet_jobs_unity_produces_mult = 0.15
 		planet_stability_add = 5
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1396,8 +1390,7 @@ building_eutab_xeno_adaptation = {
 	planet_modifier = {
 		pop_environment_tolerance = 0.1
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1509,8 +1502,7 @@ building_eutab_purity_centre = {
 	planet_modifier = {
 		pop_environment_tolerance = 0.1
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1622,8 +1614,7 @@ building_eutab_expo_guard = {
 		# job_researcher_add = 3
 		job_biologist_add = 300
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -1789,8 +1780,7 @@ building_eutab_xeno_district = {
 		planet_resettlement_unemployed_destination_mult = 0.25
 		job_eutab_anthro_add = 300
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -2061,8 +2051,7 @@ building_eutab_wargame = {
 	planet_modifier = {
 		job_eutab_gladiator_add = 500
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -2142,8 +2131,7 @@ building_eutab_warlink_colosseum = {
 		job_eutab_gladiator_add = 800
 		pop_happiness = 0.05
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -2202,11 +2190,10 @@ building_eutab_eco_preserve = {
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_max_districts_add = -1
+		# planet_max_districts_add = -1
 		job_eutab_ranger_add = 500
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		# planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -2491,8 +2478,7 @@ building_eutab_arcology = {
 		job_clerk_add = 300
 		planet_max_districts_mult = 0.1
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -2581,8 +2567,7 @@ building_eutab_comp_arcology = {
 		job_physicist_add = 400
 		planet_max_districts_mult = 0.15
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -2837,8 +2822,7 @@ building_eutab_monument_unity = {
 		# job_culture_worker_add = 4
 		pop_happiness = 0.05
 		# planet_max_buildings_add = 1
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.15
+		planet_max_districts_add = 1
 	}
 
 	inline_script = {
