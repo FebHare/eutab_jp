@@ -128,10 +128,10 @@
  # Spiritual Xenophiles
  tech_eutab_sanctified_lands: "聖なる大地"
  tech_eutab_sanctified_lands_desc: "星々の間には、我々の理解を超えた意志に触れられた、祝福された場所がある。"
- TECH_UNLOCK_EUTAB_SANCT1_TITLE: "§H建造物のアップグレード：§!$building_eutab_eco_preserve$"
- TECH_UNLOCK_EUTAB_SANCT1_DESC: "£building£ §S$building_eutab_eco_preserve$§!（及びそのアップグレード版）：£job_priest£ $job_priest$職業枠§G+2§!と£amenities£ $PLANET_AMENITIES_TITLE$§G+5§!"
- TECH_UNLOCK_EUTAB_SANCT2_TITLE: "§H建造物のアップグレード：§!$building_eutab_eco_preserve$"
- TECH_UNLOCK_EUTAB_SANCT2_DESC: "£building£ §S$building_eutab_xeno_district$§!：£job_priest£ $job_priest$の職業枠§G+2§!$mod_pop_ethic_spiritualist_attraction_mult$ §G+25%§!"
+ TECH_UNLOCK_EUTAB_SANCT1_TITLE: "§H建造物の機能追加：§!$building_eutab_eco_preserve$"
+ TECH_UNLOCK_EUTAB_SANCT1_DESC: "£building£ §S$building_eutab_eco_preserve$§!：£job_bureaucrat£ $job_bureaucrat$の職業枠§G+200§!と£amenities£ $PLANET_AMENITIES_TITLE$§G+500§!"
+ TECH_UNLOCK_EUTAB_SANCT2_TITLE: "§H建造物の機能追加：§!$building_eutab_xeno_district$"
+ TECH_UNLOCK_EUTAB_SANCT2_DESC: "£building£ §S$building_eutab_xeno_district$§!：£job_bureaucrat£ $job_bureaucrat$の職業枠§G+200§!と$mod_pop_ethic_spiritualist_attraction_mult$ §G+25%§!"
 
 
  #### AUTHORITARIAN ###
@@ -148,7 +148,7 @@
 # tech_eutab_natural_state_desc: "Our people have long taken comfort in the certainty of a hierarchy in all things. Our subjects will soon be made aware of this natural state."
  # Stateは、状態と国家のダブルミーニングか？
  tech_eutab_natural_state: "自然な状態"
- tech_eutab_natural_state_desc: "我が国民は長い間、全ての物事に階層があるという確信に安らぎを得てきた。我が従属国も、すぐにこの$tech_eutab_natural_state$に気付くだろう。"
+ tech_eutab_natural_state_desc: "我が国民は昔から、全ての物事に階層があるという確信に安らぎを得てきた。我が従属国も、すぐにこの$tech_eutab_natural_state$に気付くだろう。"
  tech_eutab_born_to_rule: "生来支配"
  tech_eutab_born_to_rule_desc: "我が国のエリートは、領域内だけでなく銀河の舞台でも、独自の階級として超然としている。"
  tech_eutab_colonial_conscription: "植民労役"

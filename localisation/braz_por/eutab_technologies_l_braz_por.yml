@@ -128,10 +128,10 @@
  # Spiritual Xenophiles
  tech_eutab_sanctified_lands: "Sanctified Lands"
  tech_eutab_sanctified_lands_desc: "There are blessed places among the stars, touched by wills beyond our understanding."
- TECH_UNLOCK_EUTAB_SANCT1_TITLE: "§SUpgrades Building:§! $building_eutab_eco_preserve$"
- TECH_UNLOCK_EUTAB_SANCT1_DESC: "£building£ §S$building_eutab_eco_preserve$§! and its upgrades: §G+2§! £job_priest£ $job_priest$ Jobs and §G+5§! £amenities£ $PLANET_AMENITIES_TITLE$"
- TECH_UNLOCK_EUTAB_SANCT2_TITLE: "§SUpgrades Building:§! $building_eutab_xeno_district$"
- TECH_UNLOCK_EUTAB_SANCT2_DESC: "£building£ §S$building_eutab_xeno_district$§!: §G+2§! £job_priest£ $job_priest$ Jobs and §G+25%§! $mod_pop_ethic_spiritualist_attraction_mult$"
+ TECH_UNLOCK_EUTAB_SANCT1_TITLE: "§SBuilding Improvement:§! $building_eutab_eco_preserve$"
+ TECH_UNLOCK_EUTAB_SANCT1_DESC: "£building£ §S$building_eutab_eco_preserve$§!: §G+200§! £job_bureaucrat£ $job_bureaucrat$ Jobs and §G+500§! £amenities£ $PLANET_AMENITIES_TITLE$"
+ TECH_UNLOCK_EUTAB_SANCT2_TITLE: "§SBuilding Improvement:§! $building_eutab_xeno_district$"
+ TECH_UNLOCK_EUTAB_SANCT2_DESC: "£building£ §S$building_eutab_xeno_district$§!: §G+200§! £job_bureaucrat£ $job_bureaucrat$ Jobs and §G+25%§! $mod_pop_ethic_spiritualist_attraction_mult$"
 
 
  #### AUTHORITARIAN ###

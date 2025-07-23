@@ -1,0 +1,338 @@
+# Ethos Unique Techs and Buildings
+# Created by Dumuzii
+
+###########################
+### TECHS - MATERIALIST ###
+###########################
+# Arcology
+tech_eutab_arcology = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_eutab_dev_district" }
+	weight = @tier3weight3
+	is_custom_tech_1 = yes
+	potential = { is_materialist = yes }
+	gateway = eu_materialist
+	prereqfor_desc = {
+		custom = {
+			title = EUTAB_FRONTIER_UPGRADE_TITLE
+			desc = EUTAB_FRONTIER_UPGRADE_DESC
+		}
+	}
+}
+
+# Self Maintaining Fleets
+tech_eutab_self_sus_fleets = {
+	cost = @tier4cost1
+	area = engineering
+	tier = 4
+	category = { materials }
+	prerequisites = { "tech_ship_armor_4" }
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_interstellar_dominion
+	}
+	gateway = eu_dominion
+	modifier = {
+		ship_armor_regen_add_perc = 0.0033
+		ship_hull_regen_add_perc = 0.0033
+	}
+}
+
+# Citizen Scientists
+tech_eutab_citizen_sci = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_basic_science_lab_2" }
+	weight = @tier2weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_one_vision
+	}
+	gateway = eu_vision
+	modifier = {
+		planet_farmers_society_research_produces_add = 0.34
+		planet_miners_engineering_research_produces_add = 0.34
+		planet_technician_physics_research_produces_add = 0.34
+	}
+}
+
+# Dedication to Wisdom
+tech_eutab_dedication_to_wisdom = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { new_worlds }
+	is_custom_tech_1 = yes
+	prerequisites = { "tech_basic_science_lab_2" }
+	weight = @tier3weight1
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_imperial_prerogative
+	}
+	gateway = eu_imperial
+	modifier = {
+		planet_researchers_upkeep_mult = -0.2
+		planet_researchers_unity_produces_add = 1
+	}
+}
+
+# Open Databases
+tech_eutab_open_databases = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = { "tech_basic_science_lab_1" }
+	weight = @tier3weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_shared_destiny
+	}
+	gateway = eu_destiny
+	modifier = {
+		country_subject_technology_sharing_mult = 0.3
+	}
+}
+
+# Field Research Initatives
+tech_eutab_field_research = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_combat_training" }
+	weight = @tier3weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_transcendent_learning
+	}
+	gateway = eu_learning
+	modifier = {
+		job_researcher_per_pop = 0.05
+	}
+}
+
+# Habitation Studies
+tech_eutab_habitation_studies = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "tech_housing_1" }
+	weight = @tier3weight1
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		eutab_has_nihilistic_acquisition_or_similar = yes
+	}
+	gateway = eu_nihilistic
+	modifier = {
+		pop_housing_usage_mult = -0.05
+		eutab_gaia_district_housing_add = 6
+	}
+}
+
+# Civilian Subsides
+# Unlocks Edict
+tech_eutab_sub_civilan_fleet = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = {
+		"tech_space_trading"
+		"tech_galactic_administration"
+	}
+	weight = @tier3weight3
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_grasp_the_void
+	}
+	gateway = eu_grasp
+}
+
+# Starship Parts Replicator
+## Starbase module
+tech_eutab_starship_parts = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { materials }
+	prerequisites = {
+		"tech_modular_engineering"
+		"tech_starbase_5"
+	}
+	weight = @tier3weight2
+	is_custom_tech_1 = yes
+	potential = {
+		is_materialist = yes
+		has_ascension_perk = ap_master_builders
+	}
+	gateway = eu_masterbuild
+}
+
+#####################################################
+## TECHS - FANATIC
+#####################################################
+# BIO
+# Advanced Cloning
+# Unlocks Cloning Complex
+tech_eutab_adv_clone_vats = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = {
+		"tech_gene_seed_purification"
+		"tech_gene_banks"
+	}
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		has_ethic = ethic_fanatic_materialist
+		has_ascension_perk = ap_engineered_evolution
+	}
+	gateway = eu_fanatic
+	prereqfor_desc = {
+		custom = {
+			title = EUTAB_CLONEVAT_UPGRADE_TITLE
+			desc = eutab_not_independant_building
+		}
+	}
+}
+
+# Rapid Maturation Techniques
+# Unlocks Clone Commando Pods Army
+tech_eutab_rapid_mature = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { biology }
+	prerequisites = { "tech_eutab_adv_clone_vats" }
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		has_ethic = ethic_fanatic_materialist
+		has_ascension_perk = ap_engineered_evolution
+	}
+	gateway = eu_fanatic
+	modifier = {
+		country_leader_cap_add = 1
+	}
+}
+
+# Machine
+# Computation Arcologies
+# Unlocks Computation Arcologies
+tech_eutab_comp_arcology = {
+	cost = @tier4cost1
+	area = physics
+	tier = 4
+	category = { computing }
+	prerequisites = {
+		"tech_eutab_arcology"
+		"tech_synthetic_workers"
+	}
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		has_ethic = ethic_fanatic_materialist
+		has_cybernetic_ascension = yes
+		# OR = {
+		# 	has_ascension_perk = ap_the_flesh_is_weak
+		# 	has_ascension_perk = ap_synthetic_evolution
+		# }
+	}
+	gateway = eu_fanatic
+	prereqfor_desc = {
+		custom = {
+			title = EUTAB_ARCOLOGY_UPGRADE_TITLE
+			desc = eutab_not_independant_building
+		}
+	}
+}
+
+# Sentient Starbases
+tech_eutab_sentient_starbases = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	category = { computing }
+	prerequisites = {
+		"tech_starbase_4"
+		"tech_synthetic_workers"
+	}
+	weight = @tier4weight3
+	is_custom_tech_1 = yes
+	potential = {
+		has_ethic = ethic_fanatic_materialist
+		has_synthetic_ascension = yes
+		# OR = {
+		# 	has_ascension_perk = ap_the_flesh_is_weak
+		# 	has_ascension_perk = ap_synthetic_evolution
+		# }
+	}
+	gateway = eu_fanatic
+	modifier = {
+		shipclass_starbase_damage_mult = 0.25
+		country_starbase_influence_cost_mult = -0.2
+		country_starbase_capacity_add = 2
+	}
+}
+
+# Psionic
+# Empathic Science Officers
+tech_eutab_empath_sci_officers = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { psionics }
+	prerequisites = { "tech_psionic_theory" }
+	weight = @tier4weight1
+	is_custom_tech_1 = yes
+	potential = {
+		has_ethic = ethic_fanatic_materialist
+		eutab_has_mind_over_matter_or_similar = yes
+	}
+	gateway = eu_fanatic
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+	}
+	prereqfor_desc = {
+		custom = {
+			title = "TECH_UNLOCK_EUTAB_EMPATH1_TITLE"
+			desc = "TECH_UNLOCK_EUTAB_EMPATH1_DESC"
+		}
+	}
+}
+
+# Nature of the Shroud
+tech_eutab_nature_shroud = {
+	cost = @tier4cost2
+	area = physics
+	tier = 4
+	category = { psionics }
+	prerequisites = { "tech_telepathy" }
+	weight = @tier4weight2
+	is_custom_tech_1 = yes
+	potential = {
+		has_ethic = ethic_fanatic_materialist
+		eutab_has_mind_over_matter_or_similar = yes
+	}
+	gateway = eu_fanatic
+	modifier = {
+		country_physics_tech_research_speed = 0.2
+		country_unity_produces_mult = 0.05
+	}
+}

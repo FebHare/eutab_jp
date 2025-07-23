@@ -1842,9 +1842,25 @@ building_eutab_xeno_district = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_technology = tech_eutab_universal_guardians }
+			owner = {
+				or = {
+					has_technology = tech_eutab_universal_guardians
+					has_technology = tech_eutab_sanctified_lands
+				}
+			}
 		}
 		text = job_bureaucrat_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_eutab_sanctified_lands }
+		}
+		modifier = {
+			job_bureaucrat_add = 200
+			pop_ethic_spiritualist_attraction_mult = 0.25
+		}
 	}
 
 	prerequisites = {
@@ -2147,11 +2163,15 @@ building_eutab_warlink_colosseum = {
 	destroy_trigger = {
 		exists = owner
 		owner = {
-			NOR = {
-				has_ascension_perk = ap_the_flesh_is_weak
-				has_ascension_perk = ap_synthetic_evolution
-				is_militarist = yes
+			OR = {
+				has_cybernetic_ascension = no
+				is_militarist = no
 			}
+			# NOR = {
+			# 	has_ascension_perk = ap_the_flesh_is_weak
+			# 	has_ascension_perk = ap_synthetic_evolution
+			# 	is_militarist = yes
+			# }
 		}
 	}
 
@@ -2210,6 +2230,25 @@ building_eutab_eco_preserve = {
 
 	triggered_desc = {
 		text = job_eutab_ranger_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_eutab_sanctified_lands }
+		}
+		modifier = {
+			job_bureaucrat_add = 200
+			planet_amenities_add = 500
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_eutab_sanctified_lands }
+		}
+		text = job_bureaucrat_effect_desc
 	}
 
 	prerequisites = {
@@ -2747,7 +2786,7 @@ building_eutab_adv_clone_vats = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			NOT = { owner = { has_ascension_perk = ap_engineered_evolution } }
+			NOT = { owner = { has_genetic_ascension = yes } }
 			AND = {
 				owner = { is_ai = yes }
 				free_district_slots = 0
