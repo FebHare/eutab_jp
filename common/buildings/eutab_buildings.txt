@@ -37,7 +37,7 @@ building_eutab_dev_district = {
 	planet_modifier = {
 		planet_housing_add = 400
 		pop_amenities_usage_mult = -0.1
-		job_clerk_add = 200
+		# job_clerk_add = 200
 		# planet_max_buildings_add = 1
 		planet_max_districts_add = 1
 	}
@@ -61,9 +61,13 @@ building_eutab_dev_district = {
 		"tech_eutab_dev_district"
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
+	inline_script = {
+		script = jobs/clerks_add
+		AMOUNT = 200
 	}
+	# triggered_desc = {
+	# 	text = job_clerk_effect_desc
+	# }
 
 	destroy_trigger = {
 		exists = owner
@@ -118,28 +122,39 @@ building_eutab_support_lab = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			# job_researcher_add = 4
-			# job_manager_add = 2
-			job_engineer_add = 400
-			job_bureaucrat_add = 200
-		}
+	# To be honest, it will be streamlined if gestalt jobs are 400 enginners and 200 unity.
+	inline_script = {
+		script = jobs/engineers_add
+		AMOUNT = 400
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_calculator_engineer_add = 600
-		}
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 200
 	}
+
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	modifier = {
+	# 		# job_researcher_add = 4
+	# 		# job_manager_add = 2
+	# 		job_engineer_add = 400
+	# 		job_bureaucrat_add = 200
+	# 	}
+	# }
+
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_calculator_engineer_add = 600
+	# 	}
+	# }
 	# triggered_planet_modifier = {
 	# 	potential = {
 	# 		exists = owner
@@ -169,29 +184,29 @@ building_eutab_support_lab = {
 		"tech_eutab_support_lab"
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_engineer_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	text = job_engineer_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_bureaucrat_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	text = job_bureaucrat_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_calculator_engineer_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	text = job_calculator_engineer_effect_desc
+	# }
 	# triggered_desc = {
 	# 	trigger = {
 	# 		exists = owner
@@ -253,31 +268,6 @@ building_eutab_battle_praxeum = {
 			}
 		}
 	}
-
-	# country_modifier = {
-	# 	country_commander_cap_add = 2
-	# 	country_naval_cap_mult = 0.1
-	# }
-
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = no }
-	# 	}
-	# 	modifier = {
-	# 		job_politician_add = 200
-	# 	}
-	# }
-
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_evaluator_add = 400
-	# 	}
-	# }
 
 	triggered_country_modifier = {
 		potential = {
@@ -376,21 +366,6 @@ building_eutab_battle_praxeum = {
 		# AMOUNT = @building_static_jobs
 		AMOUNT = 400
 	}
-		# triggered_desc = {
-	# 	trigger = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = no }
-	# 	}
-	# 	text = job_politician_effect_desc
-	# }
-
-	# triggered_desc = {
-	# 	trigger = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	text = job_evaluator_effect_desc
-	# }
 }
 
 ################################
@@ -454,7 +429,7 @@ building_eutab_gaia_district = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_housing_add = 100
+		planet_housing_add = 1
 		multiplier = modifier:eutab_gaia_district_housing_add
 	}
 
@@ -525,8 +500,6 @@ building_eutab_hydroponics_tower = {
 
 	inline_script = {
 		script = jobs/farmers_add
-		# FARMER_AMOUNT = 5
-		# ANGLER_AMOUNT = 3
 		AMOUNT = 300
 	}
 
@@ -599,11 +572,6 @@ building_eutab_foundation_institute = {
 		}
 	}
 
-	# country_modifier = {
-	# 	country_scientist_cap_add = 2
-	# 	all_technology_research_speed = 0.1
-	# }
-
 	planet_modifier = {
 		# job_head_researcher_add = 2
 		# job_politician_add = 200
@@ -620,19 +588,10 @@ building_eutab_foundation_institute = {
 		"tech_eutab_foundation_institute"
 	}
 
-	triggered_desc = {
-		text = job_head_researcher_effect_desc
-	}
-
-	# ai_resource_production = {
-	# 	trigger = {
-	# 		has_research_building = yes
-	# 	}
-	# 	physics_research = 15
-	# 	society_research = 15
-	# 	engineering_research = 15
-	# 	mult = value:eutab_ai_resource_production_adjustment_value
+	# triggered_desc = {
+	# 	text = job_head_researcher_effect_desc
 	# }
+
 	inline_script = {
 		script = districts/ai_research_extra_weighting
 		AMOUNT = 10
@@ -686,17 +645,6 @@ building_eutab_hypercomputing_complex = {
 		}
 	}
 
-	# country_modifier = {
-	# 	country_scientist_cap_add = 2
-	# 	all_technology_research_speed = 0.1
-	# }
-
-	# inline_script = {
-	# 	script = jobs/researchers_add
-	# 	# AMOUNT = 4
-	# 	AMOUNT = 120
-	# }
-
 	# same as building_supercomputer.
 	planet_modifier = {
 		planet_physicists_physics_research_produces_add = 2
@@ -742,15 +690,6 @@ building_eutab_hypercomputing_complex = {
 		"tech_eutab_hypercomputing_complex"
 	}
 
-	# ai_resource_production = {
-	# 	trigger = {
-	# 		has_research_building = yes
-	# 	}
-	# 	physics_research = 18
-	# 	society_research = 18
-	# 	engineering_research = 18
-	# 	mult = value:eutab_ai_resource_production_adjustment_value
-	# }
 	inline_script = {
 		script = districts/ai_research_extra_weighting
 		AMOUNT = 10
@@ -783,7 +722,6 @@ building_eutab_grand_hall_justice = {
 
 	potential = {
 		NOT = { has_modifier = slave_colony }
-		# num_pops >= 80
 		has_upgraded_capital = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
@@ -807,7 +745,7 @@ building_eutab_grand_hall_justice = {
 
 	planet_modifier = {
 		job_eutab_judge_add = 600
-		job_bureaucrat_add = 400
+		# job_bureaucrat_add = 400
 	}
 
 	triggered_planet_modifier = {
@@ -830,9 +768,14 @@ building_eutab_grand_hall_justice = {
 		text = job_eutab_judge_effect_desc
 	}
 
-	triggered_desc = {
-		text = job_bureaucrat_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 400
 	}
+
+	# triggered_desc = {
+	# 	text = job_bureaucrat_effect_desc
+	# }
 
 	triggered_desc = {
 		trigger = {
@@ -886,8 +829,8 @@ building_eutab_interior_ministry = {
 	}
 
 	planet_modifier = {
-		job_bureaucrat_add = 100
-		job_clerk_add = 300
+		# job_bureaucrat_add = 100
+		# job_clerk_add = 300
 		job_clerk_per_pop = 0.05
 		job_bureaucrat_per_pop = 0.02
 		# planet_max_buildings_add = 1
@@ -908,13 +851,21 @@ building_eutab_interior_ministry = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_bureaucrat_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 100
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
+	inline_script = {
+		script = jobs/clerks_add
+		AMOUNT = 300
 	}
+	# triggered_desc = {
+	# 	text = job_bureaucrat_effect_desc
+	# }
+	# triggered_desc = {
+	# 	text = job_clerk_effect_desc
+	# }
 
 	upgrades = {
 		building_eutab_shroud_ministry
@@ -962,8 +913,8 @@ building_eutab_shroud_ministry = {
 	}
 
 	planet_modifier = {
-		job_bureaucrat_add = 200
-		job_clerk_add = 300
+		# job_bureaucrat_add = 200
+		# job_clerk_add = 300
 		job_telepath_add = 300
 		job_clerk_per_pop = 0.05
 		job_bureaucrat_per_pop = 0.025
@@ -985,13 +936,21 @@ building_eutab_shroud_ministry = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_bureaucrat_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 200
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
+	inline_script = {
+		script = jobs/clerks_add
+		AMOUNT = 300
 	}
+	# triggered_desc = {
+	# 	text = job_bureaucrat_effect_desc
+	# }
+	# triggered_desc = {
+	# 	text = job_clerk_effect_desc
+	# }
 
 	triggered_desc = {
 		text = job_telepath_effect_desc
@@ -1185,14 +1144,18 @@ building_eutab_moral_codes = {
 	}
 
 	planet_modifier = {
-		job_bureaucrat_add = 300
+		# job_bureaucrat_add = 300
 		pop_cat_worker_happiness = 0.1
 		planet_stability_add = 3
 	}
 
-	triggered_desc = {
-		text = job_bureaucrat_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 300
 	}
+	# triggered_desc = {
+	# 	text = job_bureaucrat_effect_desc
+	# }
 
 	prerequisites = {
 		tech_eutab_moral_codes
@@ -1230,7 +1193,7 @@ building_eutab_planetary_parliament = {
 	}
 
 	planet_modifier = {
-		job_bureaucrat_add = 200
+		# job_bureaucrat_add = 200
 		job_bureaucrat_per_pop = 0.05
 		planet_jobs_unity_produces_mult = 0.15
 		planet_stability_add = 5
@@ -1257,26 +1220,28 @@ building_eutab_planetary_parliament = {
 					has_technology = tech_eutab_dd_implants
 				}
 			}
-			# unity = 2
-			# multiplier = trigger:num_pops
 			unity = 0.02
 			multiplier = trigger:pop_amount
 		}
 	}
 
-	triggered_desc = {
-		text = job_bureaucrat_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 200
 	}
+	# triggered_desc = {
+	# 	text = job_bureaucrat_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_parliamentary_system
-			}
-		}
-		text = job_clerk_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = {
+	# 			has_valid_civic = civic_parliamentary_system
+	# 		}
+	# 	}
+	# 	text = job_clerk_effect_desc
+	# }
 
 	prerequisites = {
 		"tech_eutab_planetary_parliament"
@@ -1318,7 +1283,7 @@ building_eutab_adaptation_lab = {
 	planet_modifier = {
 		job_eutab_master_bio_add = 200
 		# job_researcher_add = 6
-		job_biologist_add = 600
+		# job_biologist_add = 600
 	}
 
 	country_modifier = {
@@ -1350,6 +1315,10 @@ building_eutab_adaptation_lab = {
 		text = job_eutab_master_bio_effect_desc
 	}
 
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = 600
+	}
 	# triggered_desc = {
 	# 	text = job_researcher_effect_desc
 	# }
@@ -1411,27 +1380,31 @@ building_eutab_xeno_adaptation = {
 		"tech_eutab_xeno_adaptation"
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
-		}
-		modifier = {
-			job_healthcare_add = 200
-		}
+	inline_script = {
+		script	= buildings/building_eutab_xeno_adaptation_jobs
+		AMOUNT = 200
 	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
+	# 	}
+	# 	modifier = {
+	# 		job_healthcare_add = 200
+	# 	}
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_eutab_upgrade_centres }
-		}
-		modifier = {
-			job_roboticist_add = 200
-			# job_researcher_add = 2
-			job_engineer_add = 200
-		}
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_upgrade_centres }
+	# 	}
+	# 	modifier = {
+	# 		job_roboticist_add = 200
+	# 		# job_researcher_add = 2
+	# 		job_engineer_add = 200
+	# 	}
+	# }
 
 	upgrades = {
 		building_eutab_purity_centre
@@ -1441,29 +1414,29 @@ building_eutab_xeno_adaptation = {
 		is_regular_empire = yes
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
-		}
-		text = job_healthcare_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
+	# 	}
+	# 	text = job_healthcare_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_technology = tech_eutab_upgrade_centres }
-		}
-		text = job_roboticist_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_upgrade_centres }
+	# 	}
+	# 	text = job_roboticist_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_technology = tech_eutab_upgrade_centres }
-		}
-		text = job_engineer_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_upgrade_centres }
+	# 	}
+	# 	text = job_engineer_effect_desc
+	# }
 
 	destroy_trigger = {
 		exists = owner
@@ -1507,27 +1480,31 @@ building_eutab_purity_centre = {
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
-		}
-		modifier = {
-			job_healthcare_add = 400
-		}
+	inline_script = {
+		script	= buildings/building_eutab_xeno_adaptation_jobs
+		AMOUNT = 400
 	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
+	# 	}
+	# 	modifier = {
+	# 		job_healthcare_add = 400
+	# 	}
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_eutab_upgrade_centres }
-		}
-		modifier = {
-			job_roboticist_add = 400
-			# job_researcher_add = 4
-			job_engineer_add = 400
-		}
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_upgrade_centres }
+	# 	}
+	# 	modifier = {
+	# 		job_roboticist_add = 400
+	# 		# job_researcher_add = 4
+	# 		job_engineer_add = 400
+	# 	}
+	# }
 
 	country_modifier = {
 		category_biology_research_speed_mult = 0.01
@@ -1553,29 +1530,29 @@ building_eutab_purity_centre = {
 		is_regular_empire = yes
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
-		}
-		text = job_healthcare_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { NOT = { has_technology = tech_eutab_upgrade_centres } }
+	# 	}
+	# 	text = job_healthcare_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_technology = tech_eutab_upgrade_centres }
-		}
-		text = job_roboticist_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_upgrade_centres }
+	# 	}
+	# 	text = job_roboticist_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_technology = tech_eutab_upgrade_centres }
-		}
-		text = job_engineer_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_upgrade_centres }
+	# 	}
+	# 	text = job_engineer_effect_desc
+	# }
 
 	destroy_trigger = {
 		exists = owner
@@ -1609,10 +1586,10 @@ building_eutab_expo_guard = {
 	}
 
 	planet_modifier = {
-		job_bureaucrat_add = 100
-		job_soldier_add = 100
+		# job_bureaucrat_add = 100
+		# job_soldier_add = 100
 		# job_researcher_add = 3
-		job_biologist_add = 300
+		# job_biologist_add = 300
 		# planet_max_buildings_add = 1
 		planet_max_districts_add = 1
 	}
@@ -1645,17 +1622,29 @@ building_eutab_expo_guard = {
 		is_regular_empire = yes
 	}
 
-	triggered_desc = {
-		text = job_bureaucrat_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 100
 	}
+	# triggered_desc = {
+	# 	text = job_bureaucrat_effect_desc
+	# }
 
-	triggered_desc = {
-		text = job_soldier_effect_desc
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = 100
 	}
+	# triggered_desc = {
+	# 	text = job_soldier_effect_desc
+	# }
 
-	triggered_desc = {
-		text = job_biologist_effect_desc
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = 300
 	}
+	# triggered_desc = {
+	# 	text = job_biologist_effect_desc
+	# }
 
 	destroy_trigger = {
 		exists = owner
@@ -1795,15 +1784,15 @@ building_eutab_xeno_district = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_eutab_virtual_experiences }
-		}
-		modifier = {
-			job_entertainer_add = 200
-		}
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_virtual_experiences }
+	# 	}
+	# 	modifier = {
+	# 		job_entertainer_add = 200
+	# 	}
+	# }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1831,12 +1820,31 @@ building_eutab_xeno_district = {
 		text = job_eutab_anthro_effect_desc
 	}
 
+	inline_script = {
+		script			= jobs/triggered_entertainers_add
+		TRIGGER = "exists = owner owner = { has_technology = tech_eutab_virtual_experiences }"
+		AMOUNT = 200
+	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { has_technology = tech_eutab_virtual_experiences }
+	# 	}
+	# 	text = job_entertainer_effect_desc
+	# }
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_technology = tech_eutab_virtual_experiences }
+			owner = {
+				or = {
+					has_technology = tech_eutab_universal_guardians
+					has_technology = tech_eutab_sanctified_lands
+				}
+			}
+			bureaucrat_is_memorialist = no
 		}
-		text = job_entertainer_effect_desc
+		text = job_bureaucrat_effect_desc
 	}
 
 	triggered_desc = {
@@ -1848,8 +1856,9 @@ building_eutab_xeno_district = {
 					has_technology = tech_eutab_sanctified_lands
 				}
 			}
+			bureaucrat_is_memorialist = yes
 		}
-		text = job_bureaucrat_effect_desc
+		text = job_death_chronicler_effect_desc
 	}
 
 	triggered_planet_modifier = {
@@ -1909,7 +1918,7 @@ building_eutab_medigel_cultivator = {
 	planet_modifier = {
 		job_eutab_master_bio_add = 200
 		# job_researcher_add = 6
-		job_biologist_add = 600
+		# job_biologist_add = 600
 		planet_jobs_society_research_produces_mult = 0.2
 	}
 
@@ -1941,9 +1950,13 @@ building_eutab_medigel_cultivator = {
 		text = job_eutab_master_bio_effect_desc
 	}
 
-	triggered_desc = {
-		text = job_biologist_effect_desc
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = 600
 	}
+	# triggered_desc = {
+	# 	text = job_biologist_effect_desc
+	# }
 
 	ai_resource_production = {
 		trigger = {
@@ -1989,10 +2002,15 @@ building_eutab_ins_exo_design = {
 		has_major_upgraded_capital = yes
 	}
 
-	planet_modifier = {
-		# job_head_researcher_add = 1
-		# job_researcher_add = 4
-		job_politician_add = 100
+	# planet_modifier = {
+	# 	# job_head_researcher_add = 1
+	# 	# job_researcher_add = 4
+	# 	job_politician_add = 100
+	# }
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = 100
 	}
 
 	inline_script = {
@@ -2021,10 +2039,6 @@ building_eutab_ins_exo_design = {
 	}
 
 	prerequisites = { "tech_eutab_ins_exo_design" }
-
-	# triggered_desc = {
-	# 	text = job_researcher_effect_desc
-	# }
 
 	triggered_desc = {
 		text = building_eutab_ins_exo_design_effect
@@ -2247,8 +2261,18 @@ building_eutab_eco_preserve = {
 		trigger = {
 			exists = owner
 			owner = { has_technology = tech_eutab_sanctified_lands }
+			bureaucrat_is_memorialist = no
 		}
 		text = job_bureaucrat_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_technology = tech_eutab_sanctified_lands }
+			bureaucrat_is_memorialist = yes
+		}
+		text = job_death_chronicler_effect_desc
 	}
 
 	prerequisites = {
@@ -2310,15 +2334,10 @@ building_eutab_genetic_data_vault = {
 		}
 	}
 
-	# country_modifier = {
-	# 	country_scientist_cap_add = 1
-	# 	all_technology_research_speed = 0.1
-	# }
-
 	planet_modifier = {
 		# job_head_researcher_add = 2
 		# job_politician_add = 200
-		job_eutab_genetic_chronicler_add = 2
+		job_eutab_genetic_chronicler_add = 200
 		job_eutab_genetic_chronicler_per_pop = 0.02
 		# same as building_institute owned by regular empires.
 		planet_physicists_physics_research_produces_add = 2
@@ -2333,9 +2352,9 @@ building_eutab_genetic_data_vault = {
 		"tech_eutab_genetic_data_vault"
 	}
 
-	triggered_desc = {
-		text = job_politician_effect_desc
-	}
+	# triggered_desc = {
+	# 	text = job_politician_effect_desc
+	# }
 
 	triggered_desc = {
 		text = job_eutab_genetic_chronicler_effect_desc
@@ -2345,15 +2364,6 @@ building_eutab_genetic_data_vault = {
 		is_regular_empire = yes
 	}
 
-	# ai_resource_production = {
-	# 	trigger = {
-	# 		has_research_building = yes
-	# 	}
-	# 	physics_research = 12
-	# 	society_research = 12
-	# 	engineering_research = 12
-	# 	mult = value:eutab_ai_resource_production_adjustment_value
-	# }
 	inline_script = {
 		script = districts/ai_research_extra_weighting
 		AMOUNT = 10
@@ -2431,8 +2441,6 @@ building_eutab_afterlife_vault = {
 	}
 
 	country_modifier = {
-		# country_scientist_cap_add = 1
-		# all_technology_research_speed = 0.1
 		category_computing_research_speed_mult = 0.05
 	}
 
@@ -2440,23 +2448,14 @@ building_eutab_afterlife_vault = {
 		"tech_eutab_digital_afterlife"
 	}
 
-	triggered_desc = {
-		text = job_politician_effect_desc
-	}
+	# triggered_desc = {
+	# 	text = job_politician_effect_desc
+	# }
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
 	}
 
-	# ai_resource_production = {
-	# 	trigger = {
-	# 		has_research_building = yes
-	# 	}
-	# 	physics_research = 10
-	# 	society_research = 10
-	# 	engineering_research = 10
-	# 	mult = value:eutab_ai_resource_production_adjustment_value
-	# }
 	inline_script = {
 		script = districts/ai_research_extra_weighting
 		AMOUNT = 10
@@ -2514,7 +2513,7 @@ building_eutab_arcology = {
 	planet_modifier = {
 		planet_housing_add = 800
 		pop_amenities_usage_mult = -0.15
-		job_clerk_add = 300
+		# job_clerk_add = 300
 		planet_max_districts_mult = 0.1
 		# planet_max_buildings_add = 1
 		planet_max_districts_add = 1
@@ -2538,9 +2537,13 @@ building_eutab_arcology = {
 		"tech_eutab_arcology"
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
+	inline_script = {
+		script = jobs/clerks_add
+		AMOUNT = 300
 	}
+	# triggered_desc = {
+	# 	text = job_clerk_effect_desc
+	# }
 
 	upgrades = {
 		building_eutab_comp_arcology
@@ -2601,9 +2604,9 @@ building_eutab_comp_arcology = {
 	planet_modifier = {
 		planet_housing_add = 1200
 		pop_amenities_usage_mult = -0.2
-		job_clerk_add = 400
+		# job_clerk_add = 400
 		# job_researcher_add = 4
-		job_physicist_add = 400
+		# job_physicist_add = 400
 		planet_max_districts_mult = 0.15
 		# planet_max_buildings_add = 1
 		planet_max_districts_add = 1
@@ -2615,13 +2618,21 @@ building_eutab_comp_arcology = {
 		"tech_eutab_comp_arcology"
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
+	inline_script = {
+		script = jobs/clerks_add
+		AMOUNT = 400
 	}
+	# triggered_desc = {
+	# 	text = job_clerk_effect_desc
+	# }
 
-	triggered_desc = {
-		text = job_physicist_effect_desc
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = 400
 	}
+	# triggered_desc = {
+	# 	text = job_physicist_effect_desc
+	# }
 
 	destroy_trigger = {
 		exists = owner
@@ -2797,9 +2808,10 @@ building_eutab_adv_clone_vats = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_researcher_effect_desc
-	}
+	# There is no job, at now. (First EUTAB had 3 researcher slots)
+	# triggered_desc = {
+	# 	text = job_researcher_effect_desc
+	# }
 
 	triggered_desc = {
 		trigger = {
@@ -2875,10 +2887,6 @@ building_eutab_monument_unity = {
 		"tech_eutab_monument_unity"
 	}
 
-	# triggered_desc = {
-	# 	text = job_culture_worker_effect_desc
-	# }
-
 	destroy_trigger = {
 		exists = owner
 		owner = {
@@ -2947,10 +2955,6 @@ building_eutab_symbol_unity = {
 		"tech_eutab_one_true_faith"
 	}
 
-	# triggered_desc = {
-	# 	text = job_priest_effect_desc
-	# }
-
 	destroy_trigger = {
 		exists = owner
 		owner = {
@@ -2985,10 +2989,6 @@ building_eutab_spawning_garden = {
 			is_hive_empire = yes
 			NOT = { has_origin = origin_progenitor_hive }
 		}
-		# or = {
-		# 	num_buildings = { type = any value < 15 }
-		# 	owner = { is_ai = no }
-		# }
 	}
 
 	allow = {
@@ -3007,9 +3007,9 @@ building_eutab_spawning_garden = {
 		}
 	}
 
-	planet_modifier = {
-		job_spawning_drone_add = 200
-	}
+	# planet_modifier = {
+	# 	job_spawning_drone_add = 200
+	# }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -3051,31 +3051,35 @@ building_eutab_spawning_garden = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			NAND = {
-				exists = owner
-				owner = { has_origin = origin_necrophage }
-				exists = growing_species
-				growing_species = {
-					NOT = { has_trait = trait_hive_mind }
-				}
-			}
-		}
-		text = job_spawning_drone_effect_desc
+	inline_script = {
+		script = jobs/spawning_drone_add
+		AMOUNT = 200
 	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		NAND = {
+	# 			exists = owner
+	# 			owner = { has_origin = origin_necrophage }
+	# 			exists = growing_species
+	# 			growing_species = {
+	# 				NOT = { has_trait = trait_hive_mind }
+	# 			}
+	# 		}
+	# 	}
+	# 	text = job_spawning_drone_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_origin = origin_necrophage }
-			exists = growing_species
-			growing_species = {
-				NOT = { has_trait = trait_hive_mind }
-			}
-		}
-		text = job_spawning_drone_necrophage_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { has_origin = origin_necrophage }
+	# 		exists = growing_species
+	# 		growing_species = {
+	# 			NOT = { has_trait = trait_hive_mind }
+	# 		}
+	# 	}
+	# 	text = job_spawning_drone_necrophage_effect_desc
+	# }
 
 	triggered_desc = {
 		trigger = {
@@ -3137,9 +3141,9 @@ building_eutab_beta_node = {
 		is_occupied_flag = no
 	}
 
-	planet_modifier = {
-		job_synapse_drone_add = 400
-	}
+	# planet_modifier = {
+	# 	job_synapse_drone_add = 400
+	# }
 
 	triggered_planet_modifier = {
 		potential = { eutab_is_hive_or_similar_planet = yes }
@@ -3157,9 +3161,13 @@ building_eutab_beta_node = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_synapse_drone_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 400
 	}
+	# triggered_desc = {
+	# 	text = job_synapse_drone_effect_desc
+	# }
 
 	triggered_desc = {
 		text = building_eutab_beta_node_organic_synergy_effect
@@ -3213,7 +3221,7 @@ building_eutab_hive_alpha_node = {
 	}
 
 	planet_modifier = {
-		job_synapse_drone_add = 600
+		# job_synapse_drone_add = 600
 		building_eutab_hive_node_support_max = 2
 	}
 
@@ -3233,9 +3241,13 @@ building_eutab_hive_alpha_node = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_synapse_drone_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 600
 	}
+	# triggered_desc = {
+	# 	text = job_synapse_drone_effect_desc
+	# }
 
 	triggered_desc = {
 		text = building_eutab_hive_alpha_node_organic_synergy_effect
@@ -3297,10 +3309,6 @@ building_eutab_hive_node_support = {
 		is_occupied_flag = no
 	}
 
-	# planet_modifier = {
-	# 	job_maintenance_drone_add = 2
-	# }
-
 	triggered_planet_modifier = {
 		potential = { eutab_is_hive_or_similar_planet = yes }
 		planet_building_build_speed_mult = 0.1
@@ -3321,10 +3329,6 @@ building_eutab_hive_node_support = {
 	prerequisites = {
 		"tech_eutab_hive_alpha_node"
 	}
-
-	# triggered_desc = {
-	# 	text = job_maintenance_drone_effect_desc
-	# }
 
 	triggered_desc = {
 		text = job_synapse_drone_effect_desc
@@ -3482,7 +3486,7 @@ building_eutab_hive_node_stars = {
 	}
 
 	planet_modifier = {
-		job_warrior_drone_add = 400
+		# job_warrior_drone_add = 400
 		job_patrol_drone_add = 200
 	}
 
@@ -3517,9 +3521,13 @@ building_eutab_hive_node_stars = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_warrior_drone_effect_desc
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = 400
 	}
+	# triggered_desc = {
+	# 	text = job_warrior_drone_effect_desc
+	# }
 
 	triggered_desc = {
 		text = job_patrol_drone_effect_desc
@@ -3789,25 +3797,25 @@ building_eutab_automation_sector = {
 		is_occupied_flag = no
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-		}
-		job_replicator_add = 500
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_machine_empire = yes
+	# 		}
+	# 	}
+	# 	job_replicator_add = 500
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_individual_machine = yes
-			}
-		}
-		job_roboticist_add = 300
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_individual_machine = yes
+	# 		}
+	# 	}
+	# 	job_roboticist_add = 300
+	# }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -3839,25 +3847,29 @@ building_eutab_automation_sector = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-		}
-		text = job_replicator_effect_desc
+	inline_script = {
+		script = jobs/roboticist_add
+		AMOUNT = 400
 	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_machine_empire = yes
+	# 		}
+	# 	}
+	# 	text = job_replicator_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_individual_machine = yes
-			}
-		}
-		text = job_roboticist_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_individual_machine = yes
+	# 		}
+	# 	}
+	# 	text = job_roboticist_effect_desc
+	# }
 
 	prerequisites = {
 		"tech_eutab_m_automation_sector"
@@ -3908,7 +3920,7 @@ building_eutab_preservation_nexus = {
 	}
 
 	planet_modifier = {
-		job_coordinator_add = 100
+		# job_coordinator_add = 100
 		planet_buildings_upkeep_mult = -0.1
 		planet_districts_upkeep_mult = -0.1
 		planet_amenities_mult = 0.1
@@ -3934,9 +3946,13 @@ building_eutab_preservation_nexus = {
 		is_gestalt = yes
 	}
 
-	triggered_desc = {
-		text = job_coordinator_effect_desc
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = 100
 	}
+	# triggered_desc = {
+	# 	text = job_coordinator_effect_desc
+	# }
 
 	destroy_trigger = {
 		exists = owner
@@ -3978,13 +3994,17 @@ building_eutab_dm_energy = {
 	}
 
 	planet_modifier = {
-		job_technician_drone_add = 1000
+		# job_technician_drone_add = 1000
 		job_technician_drone_per_pop = 0.1
 	}
 
-	triggered_desc = {
-		text = job_technician_drone_effect_desc
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = 1000
 	}
+	# triggered_desc = {
+	# 	text = job_technician_drone_effect_desc
+	# }
 
 	prerequisites = {
 		"tech_eutab_m_command_control"
@@ -4103,7 +4123,7 @@ building_eutab_dm_forge = {
 			}
 		}
 		modifier = {
-			job_fabricator_add = 1000
+			# job_fabricator_add = 1000
 			job_fabricator_per_pop = 0.1
 		}
 	}
@@ -4122,27 +4142,31 @@ building_eutab_dm_forge = {
 	# 	}
 	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = 1000
 	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_machine_empire = yes
+	# 			is_catalytic_empire = no
+	# 		}
+	# 	}
+	# 	text = job_fabricator_effect_desc
+	# }
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
-	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_gestalt = yes
+	# 			is_catalytic_empire = yes
+	# 		}
+	# 	}
+	# 	text = job_catalytic_drone_effect_desc
+	# }
 
 	prerequisites = {
 		"tech_eutab_m_command_control"
@@ -4262,13 +4286,17 @@ building_eutab_dm_molecular_synchronizer = {
 	}
 
 	planet_modifier = {
-		job_mining_drone_add = 1000
+		# job_mining_drone_add = 1000
 		job_mining_drone_per_pop = 0.1
 	}
 
-	triggered_desc = {
-		text = job_mining_drone_effect_desc
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = 1000
 	}
+	# triggered_desc = {
+	# 	text = job_mining_drone_effect_desc
+	# }
 
 	prerequisites = {
 		"tech_eutab_m_command_control"
@@ -4320,7 +4348,7 @@ building_eutab_geothermal_tap = {
 	}
 
 	planet_modifier = {
-		job_technician_drone_add = 200
+		# job_technician_drone_add = 200
 		planet_technician_energy_produces_add = 0.25
 	}
 
@@ -4346,9 +4374,13 @@ building_eutab_geothermal_tap = {
 	# 	multiplier = eutab_geothermal_tap_infrastructure_level
 	# }
 
-	triggered_desc = {
-		text = job_technician_drone_effect_desc
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = 200
 	}
+	# triggered_desc = {
+	# 	text = job_technician_drone_effect_desc
+	# }
 
 	triggered_desc = {
 		text = building_eutab_geothermal_tap_effect

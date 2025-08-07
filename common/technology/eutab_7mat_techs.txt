@@ -118,7 +118,10 @@ tech_eutab_field_research = {
 	}
 	gateway = eu_learning
 	modifier = {
-		job_researcher_per_pop = 0.05
+		# job_researcher_per_pop = 0.05
+		job_physicist_per_pop = 0.02
+		job_biologist_per_pop = 0.02
+		job_engineer_per_pop = 0.02
 	}
 }
 
@@ -138,7 +141,7 @@ tech_eutab_habitation_studies = {
 	gateway = eu_nihilistic
 	modifier = {
 		pop_housing_usage_mult = -0.05
-		eutab_gaia_district_housing_add = 6
+		eutab_gaia_district_housing_add = 600
 	}
 }
 
