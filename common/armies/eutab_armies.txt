@@ -28,8 +28,9 @@ eutab_mindlink_commando_army = {
 	potential = {
 		from = {
 			NOR = {
-				is_species_class = MACHINE
-				is_species_class = ROBOT
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_limited_cybernetic"
 				is_sapient = no
 			}
 		}
@@ -106,9 +107,9 @@ eutab_janissary_army = {
 	potential = {
 		from = {
 			NOR = {
-				has_trait = trait_mechanical
-				has_trait = trait_machine_unit
-				has_trait = trait_hive_mind
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_limited_cybernetic"
 				is_sapient = no
 			}
 		}
@@ -149,6 +150,7 @@ eutab_clone_commando_pod = {
 			NOR = {
 				has_trait = "trait_mechanical"
 				has_trait = "trait_machine_unit"
+				has_trait = "trait_limited_cybernetic"
 				is_sapient = no
 			}
 		}
