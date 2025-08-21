@@ -1,12 +1,12 @@
 # This file's name must be after "01_job_categories.txt" and "02_pop_categories_categories.txt".
 # Otherwise, "Failed to read key reference planet_jobs_productive from database" occurs.
-planet_politicians = {
-	parent = planet_jobs_productive
-	generate_add_modifiers = {
-		produces
-	}
-	modifier_category = pop_job
-}
+# planet_politicians = {
+# 	parent = planet_jobs_productive
+# 	generate_add_modifiers = {
+# 		produces
+# 	}
+# 	modifier_category = pop_job
+# }
 
 pop_category_slave = {
 	parent = planet_pops

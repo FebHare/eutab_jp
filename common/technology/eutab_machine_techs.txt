@@ -260,7 +260,8 @@ tech_eutab_m_fleet_intergration = {
 	}
 	modifier = {
 		ship_experience_gain_mult = 0.2
-		command_limit_add = 10
+		# command_limit_add = 10
+		command_limit_add = 20
 	}
 }
 

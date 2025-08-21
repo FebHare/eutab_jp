@@ -65,6 +65,9 @@ building_hydroponics_farm = {
 	prerequisites = {
 		"tech_hydroponics"
 	}
+	
+	# Static jobs building
+	ai_weight_coefficient = 0.0
 
 	# EUTAB
 	upgrades = {

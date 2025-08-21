@@ -3,7 +3,7 @@
 #############
 building_military_academy = {
 	base_buildtime = @b2_time
-	planet_limit = 1
+	empire_limit = 1
 	can_be_ruined = no
 	category = army
 

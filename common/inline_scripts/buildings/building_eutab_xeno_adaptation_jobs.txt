@@ -18,34 +18,6 @@ triggered_planet_modifier = {
 	}
 }
 
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			NOT = {
-				has_technology = tech_eutab_upgrade_centres
-			}
-		}
-		healthcare_is_mutagenic_trigger = no
-		healthcare_is_genomic_researcher_trigger = no
-	}
-	text = job_healthcare_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			NOT = {
-				has_technology = tech_eutab_upgrade_centres
-			}
-		}
-		healthcare_is_mutagenic_trigger = yes
-		healthcare_is_genomic_researcher_trigger = no
-	}
-	text = job_toxic_baths_effect_desc
-}
-
 # Based on jobs/roboticist_add, but triggered (it is assumed there is xenophobe owner)
 triggered_planet_modifier = {
 	potential = {
@@ -57,31 +29,6 @@ triggered_planet_modifier = {
 	modifier = {
 		job_roboticist_add = $AMOUNT$
 	}
-}
-
-triggered_desc = {
-	trigger = {
-		roboticist_is_bath_attendant_individual_machine = no
-		exists = owner
-		owner = {
-			has_technology = tech_eutab_upgrade_centres
-			is_gestalt = no
-			is_individual_machine = no
-		}
-	}
-	text = job_roboticist_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		roboticist_is_bath_attendant_individual_machine = no
-		exists = owner
-		owner = {
-			has_technology = tech_eutab_upgrade_centres
-			is_individual_machine = yes
-		}
-	}
-	text = job_roboticist_individual_machine_effect_desc
 }
 
 triggered_desc = {
@@ -113,20 +60,6 @@ triggered_planet_modifier = {
 	}
 }
 
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			# is_regular_empire = yes
-			has_technology = tech_eutab_upgrade_centres
-			NOT = {
-				has_country_flag = fallen_empire_1
-			}
-		}
-	}
-	text = job_engineer_effect_desc
-}
-
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -136,16 +69,4 @@ triggered_planet_modifier = {
 		}
 	}
 	job_fe_archivist_add = $AMOUNT$
-}
-
-# Description
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			has_technology = tech_eutab_upgrade_centres
-			has_country_flag = fallen_empire_1
-		}
-	}
-	text = job_fe_archivist_effect_desc
 }

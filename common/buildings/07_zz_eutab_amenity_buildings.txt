@@ -53,7 +53,7 @@ building_paradise_dome = {
 
 	planet_modifier = {
 		planet_housing_add = 3000
-		planet_amenities_add = 5000
+		planet_amenities_add = 3000
 	}
 
 	triggered_planet_modifier = {
@@ -90,6 +90,8 @@ building_paradise_dome = {
 			NOT = { has_valid_civic = civic_shared_burden }
 		}
 	}
+
+	ai_weight_coefficient = 1.25
 
 	#eutab
 	upgrades = {

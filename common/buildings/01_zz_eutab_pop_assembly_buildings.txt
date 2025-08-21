@@ -86,25 +86,6 @@ building_machine_assembly_complex = {
 		tech_mega_assembly
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-			}
-		}
-		text = job_replicator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_individual_machine = yes
-			}
-		}
-		text = job_roboticist_individual_machine_effect_desc
-	}
 	#eutab
 	upgrades = {
 		building_eutab_automation_sector # EUTAB
@@ -448,16 +429,6 @@ building_clone_vats = {
 				exists = owner
 				owner = {
 					is_lithoid_empire = no
-				}
-			}
-			food = 15
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					is_lithoid_empire = no
-					has_cloning_tradition = yes
 				}
 			}
 			food = 15
