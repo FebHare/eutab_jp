@@ -11,7 +11,7 @@ has_research_building = {
 	}
 }
 
-has_any_farming_district_or_buildings = {
+has_any_farming_district_or_building = {
 	OR = {
 		has_district = district_farming
 		has_district = district_farming_uncapped

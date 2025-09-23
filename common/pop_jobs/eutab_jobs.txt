@@ -657,6 +657,7 @@ eutab_siphon = {
 	weight = {
 		weight = @complex_drone_job_weight
 		mult = value:job_weights_modifier|JOB|eutab_siphon|RESOURCE|sr_dark_matter|
+		mult = value:scripted_job_weight_shroud_forged_mult
 	}
 
 	promotion = {

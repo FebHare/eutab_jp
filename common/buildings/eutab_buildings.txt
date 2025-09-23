@@ -492,9 +492,7 @@ building_eutab_foundation_institute = {
 		planet_physicists_physics_research_produces_add = 2
 		planet_biologists_society_research_produces_add = 2
 		planet_engineers_engineering_research_produces_add = 2
-		planet_physicists_consumer_goods_upkeep_add = 1.5
-		planet_biologists_consumer_goods_upkeep_add = 1.5
-		planet_engineers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1.5
 	}
 
 	prerequisites = {
@@ -570,9 +568,7 @@ building_eutab_hypercomputing_complex = {
 				is_gestalt = no
 			}
 		}
-		planet_physicists_consumer_goods_upkeep_add = 1.5
-		planet_biologists_consumer_goods_upkeep_add = 1.5
-		planet_engineers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1.5
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -581,9 +577,7 @@ building_eutab_hypercomputing_complex = {
 				is_machine_empire = yes
 			}
 		}
-		planet_physicists_energy_upkeep_add = 3
-		planet_biologists_energy_upkeep_add = 3
-		planet_engineers_energy_upkeep_add = 3
+		planet_researchers_energy_upkeep_add = 3
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -592,9 +586,7 @@ building_eutab_hypercomputing_complex = {
 				is_hive_empire = yes
 			}
 		}
-		planet_physicists_minerals_upkeep_add = 4
-		planet_biologists_minerals_upkeep_add = 4
-		planet_engineers_minerals_upkeep_add = 4
+		planet_researchers_minerals_upkeep_add = 4
 	}
 
 	prerequisites = {
@@ -1959,9 +1951,7 @@ building_eutab_genetic_data_vault = {
 		planet_physicists_physics_research_produces_add = 2
 		planet_biologists_society_research_produces_add = 2
 		planet_engineers_engineering_research_produces_add = 2
-		planet_physicists_consumer_goods_upkeep_add = 1.5
-		planet_biologists_consumer_goods_upkeep_add = 1.5
-		planet_engineers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1.5
 	}
 
 	prerequisites = {
@@ -2043,9 +2033,7 @@ building_eutab_afterlife_vault = {
 		planet_physicists_physics_research_produces_add = 2
 		planet_biologists_society_research_produces_add = 2
 		planet_engineers_engineering_research_produces_add = 2
-		planet_physicists_consumer_goods_upkeep_add = 1.5
-		planet_biologists_consumer_goods_upkeep_add = 1.5
-		planet_engineers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1.5
 	}
 
 	country_modifier = {
