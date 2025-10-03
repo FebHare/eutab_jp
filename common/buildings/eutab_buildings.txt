@@ -2242,7 +2242,10 @@ building_eutab_adv_clone_vats = {
 
 	potential = {
 		exists = owner
-		owner = { has_tradition = tr_genetics_adopt }
+		owner = {
+			# has_tradition = tr_genetics_adopt
+			has_cloning_tradition = yes
+		}
 		NOT = { has_modifier = resort_colony }
 		OR = {
 			owner = { is_ai = no }
@@ -2365,6 +2368,28 @@ building_eutab_adv_clone_vats = {
 			}
 		}
 		bonus_pop_growth = 1.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = clone_army_full_potential
+				has_active_tradition = tr_cloning_adopt_clone_army
+			}
+		}
+		clone_soldiers_sustained = @clones_sustained_low
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = clone_army_full_potential
+				has_active_tradition = tr_cloning_finish_clone_army
+			}
+		}
+		clone_soldiers_sustained = @clones_sustained_low
 	}
 
 	prerequisites = {
