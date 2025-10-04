@@ -715,9 +715,27 @@ building_eutab_interior_ministry = {
 	}
 
 	planet_modifier = {
-		job_clerk_per_pop = 0.05
+		# job_clerk_per_pop = 0.05
 		job_bureaucrat_per_pop = 0.02
 		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = no
+			}
+		}
+		job_clerk_per_pop = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_tankbound_empire = yes }
+		}
+		job_production_overseer_per_pop = 0.05
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
@@ -790,9 +808,27 @@ building_eutab_shroud_ministry = {
 
 	planet_modifier = {
 		job_telepath_add = 300
-		job_clerk_per_pop = 0.05
+		# job_clerk_per_pop = 0.05
 		job_bureaucrat_per_pop = 0.025
 		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = no
+			}
+		}
+		job_clerk_per_pop = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_tankbound_empire = yes }
+		}
+		job_production_overseer_per_pop = 0.05
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"

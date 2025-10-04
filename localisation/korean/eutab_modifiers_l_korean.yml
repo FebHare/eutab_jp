@@ -158,3 +158,5 @@
  mod_building_eutab_dm_molecular_synchronizer_max: "Max $building_eutab_dm_molecular_synchronizer$"
  mod_planet_building_eutab_geothermal_tap_build_speed_mult: "$building_eutab_geothermal_tap$ Build Speed"
  mod_building_eutab_geothermal_tap_max: "Max $building_eutab_geothermal_tap$"
+ mod_job_production_overseer_per_pop: "§G+1§! $job_production_overseer$ Job per $VALUE$ Pops"
+ mod_job_production_overseer_per_pop_short: "\n§G+1§! £mod_job_production_overseer_add£ per $VALUE$ £pop£"
