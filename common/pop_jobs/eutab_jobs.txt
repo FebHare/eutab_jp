@@ -123,7 +123,7 @@ eutab_minor_noble = {
 
 	planet_modifier = {
 		planet_jobs_worker_produces_mult = 0.01
-		planet_jobs_slave_produces_mult = 0.01
+		pop_slave_bonus_workforce_mult = 0.01
 	}
 
 	country_modifier = {
@@ -869,7 +869,7 @@ eutab_shroud_lord = {
 	}
 
 	planet_modifier = {
-		planet_jobs_slave_produces_mult = 0.05
+		pop_slave_bonus_workforce_mult = 0.05
 	}
 
 	weight = {

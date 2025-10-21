@@ -236,7 +236,7 @@ tech_eutab_breeding_loyalty = {
 	}
 	gateway = eu_fanatic
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.1
+		pop_slave_bonus_workforce_mult = 0.1
 		pop_cat_slave_political_power = -0.33
 	}
 }
