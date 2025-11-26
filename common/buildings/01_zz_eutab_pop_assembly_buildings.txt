@@ -393,18 +393,18 @@ building_clone_vats = {
 		cost = {
 			minerals = 500
 		}
-		# Org/Lith cost
+		# Organic/Lithoid/infernal cost
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = no }
+				owner = { is_lithoid_or_infernal_empire = no }
 			}
 			food = 500
 		}
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = yes }
+				owner = { is_lithoid_or_infernal_empire = yes }
 			}
 			energy = 500
 		}
@@ -413,12 +413,12 @@ building_clone_vats = {
 		upkeep = {
 			energy = 2
 		}
-		# Org/Lith upkeep
+		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 				}
 			}
 			food = 15
@@ -427,7 +427,7 @@ building_clone_vats = {
 			trigger = {
 				exists = owner
 				owner = {
-					is_lithoid_empire = no
+					is_lithoid_or_infernal_empire = no
 					has_cloning_tradition = yes
 				}
 			}
@@ -451,6 +451,25 @@ building_clone_vats = {
 				}
 			}
 			minerals = 15
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+				}
+			}
+			alloys = @b2_alloy_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			alloys = @b2_alloy_upkeep
 		}
 	}
 

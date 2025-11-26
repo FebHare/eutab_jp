@@ -2311,18 +2311,18 @@ building_eutab_adv_clone_vats = {
 			minerals = 750
 		}
 
-		# Org/Lith Cost
+		# Organic/Lithoid/infernal cost
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = no }
+				owner = { is_lithoid_or_infernal_empire = no }
 			}
 			food = 750
 		}
 		cost = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = yes }
+				owner = { is_lithoid_or_infernal_empire = yes }
 			}
 			energy = 750
 		}
@@ -2333,19 +2333,63 @@ building_eutab_adv_clone_vats = {
 			exotic_gases = @b2_rare_upkeep
 		}
 		# Org/Lith upkeep
+		# Organic/Lithoid/infernal upkeep
 		upkeep = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = no }
+				owner = {
+					is_lithoid_or_infernal_empire = no
+				}
 			}
 			food = 45
 		}
 		upkeep = {
 			trigger = {
 				exists = owner
-				owner = { is_lithoid_empire = yes }
+				owner = {
+					is_lithoid_or_infernal_empire = no
+					has_cloning_tradition = yes
+				}
+			}
+			food = 45
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
 			}
 			minerals = 45
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			minerals = 45
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+				}
+			}
+			alloys = @b3_alloy_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_infernal_empire = yes
+					has_cloning_tradition = yes
+				}
+			}
+			alloys = @b3_alloy_upkeep
 		}
 	}
 

@@ -1,17 +1,18 @@
 # # This file's name must be after "01_job_categories.txt".
-# planet_researchers = {
-# 	icon = "job_researcher"
-# 	parent = planet_jobs_specialist
-# 	generate_mult_modifiers = {
-# 		produces
-# 		upkeep
-# 	}
-# 	# EUTAB
-# 	generate_add_modifiers = {
-# 		produces
-# 	}
-# 	modifier_category = pop_job
-# }
+planet_researchers = {
+	icon = "job_researcher"
+	parent = planet_jobs_specialist
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		upkeep
+		# EUTAB
+		produces
+	}
+	modifier_category = pop_job
+}
 
 # planet_knights = {
 # 	parent = planet_jobs_specialist
