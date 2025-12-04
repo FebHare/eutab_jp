@@ -206,7 +206,7 @@ building_eutab_battle_praxeum = {
 	}
 
 	# I put 2 times of building_military_academy.
-	triggered_planet_modifier = {
+	triggered_country_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -217,7 +217,7 @@ building_eutab_battle_praxeum = {
 		pop_soldier_bonus_workforce_mult = 0.30
 	}
 
-	triggered_planet_modifier = {
+	triggered_country_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -228,11 +228,11 @@ building_eutab_battle_praxeum = {
 		pop_warrior_drone_bonus_workforce_mult = 0.30
 	}
 
-	triggered_planet_modifier = {
+	triggered_country_modifier = {
 		potential = {
-			OR = {
-				has_active_building = building_order_keep
-				has_active_building = building_order_castle
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
 			}
 		}
 		# pop_knight_bonus_workforce_mult = 0.05

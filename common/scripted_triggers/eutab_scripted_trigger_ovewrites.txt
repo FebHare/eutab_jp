@@ -24,6 +24,7 @@ has_any_farming_district_or_building = {
 has_any_generator_district_or_building = {
 	OR = {
 		has_district = district_generator
+		has_district = district_geothermal
 		has_district = district_hab_energy
 		has_district = district_photosynthesis_fields
 		has_building = building_generator_generic
