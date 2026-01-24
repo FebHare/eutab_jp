@@ -9,16 +9,33 @@ tech_eutab_maint_t1 = {
 	cost = @tier2cost1
 	area = engineering
 	tier = 2
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { industry }
 	prerequisites = { "tech_micro_replicators" }
 	weight = @tier2weight1
 	potential = {
-		is_machine_empire = yes
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
 	}
 	modifier = {
 		planet_districts_energy_upkeep_mult = -0.25
 		planet_amenities_no_happiness_mult = 0.05
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_regular_empire = yes
+		}
+
+		modifier = {
+			planet_districts_energy_upkeep_mult = -0.25
+			planet_amenities_mult = 0.05
+		}
 	}
 }
 
@@ -27,14 +44,33 @@ tech_eutab_maint_t2 = {
 	cost = @tier3cost1
 	area = engineering
 	tier = 2
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { industry }
 	prerequisites = { "tech_eutab_maint_t1" }
 	weight = @tier3weight1
-	potential = { is_machine_empire = yes }
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
 	modifier = {
 		planet_districts_energy_upkeep_mult = -0.25
 		planet_amenities_no_happiness_mult = 0.05
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_regular_empire = yes
+		}
+
+		modifier = {
+			planet_districts_energy_upkeep_mult = -0.25
+			planet_amenities_mult = 0.05
+		}
 	}
 }
 
@@ -43,17 +79,36 @@ tech_eutab_maint_t3 = {
 	cost = @tier3cost3
 	area = engineering
 	tier = 3
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { industry }
 	prerequisites = {
 		"tech_eutab_maint_t2"
 		"tech_self_assembling_components"
 	}
 	weight = @tier3weight3
-	potential = { is_machine_empire = yes }
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
 	modifier = {
 		planet_districts_cost_mult = -0.1
 		planet_amenities_no_happiness_mult = 0.05
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_regular_empire = yes
+		}
+
+		modifier = {
+			planet_districts_cost_mult = -0.1
+			planet_amenities_mult = 0.05
+		}
 	}
 }
 
@@ -62,14 +117,33 @@ tech_eutab_maint_t4 = {
 	cost = @tier4cost1
 	area = engineering
 	tier = 4
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { industry }
 	prerequisites = { "tech_eutab_maint_t3" }
 	weight = @tier4weight1
-	potential = { is_machine_empire = yes }
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
 	modifier = {
 		planet_districts_cost_mult = -0.1
 		planet_amenities_no_happiness_mult = 0.05
+	}
+
+	technology_swap = {
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_regular_empire = yes
+		}
+
+		modifier = {
+			planet_districts_cost_mult = -0.1
+			planet_amenities_mult = 0.05
+		}
 	}
 }
 
@@ -79,11 +153,17 @@ tech_eutab_m_psychological_warfare = {
 	cost = @tier2cost3
 	area = society
 	tier = 2
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { military_theory }
+	# note: tech_adaptive_combat_algorithms prerequisites tech can't be researched by synthetic_empire.
 	prerequisites = { "tech_adaptive_combat_algorithms" }
 	weight = @tier2weight3
-	potential = { is_machine_empire = yes }
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
 }
 
 #Sentient Bunkers
@@ -91,11 +171,17 @@ tech_eutab_m_sentient_bunkers = {
 	cost = @tier3cost3
 	area = society
 	tier = 3
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { military_theory }
+	# note: tech_biomechanics prerequisites tech can't be researched by synthetic_empire.
 	prerequisites = { "tech_biomechanics" }
 	weight = @tier3weight3
-	potential = { is_machine_empire = yes }
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
 	modifier = {
 		army_defense_damage_mult = 0.2
 		army_defense_health_mult = 0.35
@@ -107,10 +193,15 @@ tech_eutab_m_adaptation_mastery = {
 	cost = @tier5cost1
 	area = engineering
 	tier = 5
-	is_custom_tech_1 = yes
+	# is_custom_tech_1 = yes
 	category = { industry }
 	weight = 0
-	potential = { is_machine_empire = yes }
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
 	prereqfor_desc = {
 		# custom = {
 		# 	title = "TECH_UNLOCK_EUTAB_ADVANCED_ROBO_MODDING_TITLE"
@@ -137,12 +228,14 @@ tech_eutab_coop_processing = {
 	is_custom_tech_1 = yes
 	category = { statecraft }
 	weight = @tier4weight2
+	# It sounds for MI only.
 	potential = { is_machine_empire = yes }
 }
 
 ############################################
 # MACHINE UNIQUE TECHS  - PERK REQUIREMENT #
 ############################################
+# FebHare: These tech are for MI only. Synthetic empire and individualist machine have reguler empire variants.
 #Annexation Protocols
 # Empire Edict Unlocked
 tech_eutab_m_annexation_proto = {
