@@ -33,7 +33,7 @@ triggered_planet_modifier = {
 
 triggered_desc = {
 	trigger = {
-		roboticist_is_bath_attendant_individual_machine = yes
+		has_active_building = building_toxic_bath_machine
 		exists = owner
 		owner = {
 			has_technology = tech_eutab_upgrade_centres

@@ -7,5 +7,5 @@ tags={
 }
 picture="thumbnail.png"
 name="[JP localize and modernization] EUTAB - Ethos Unique Techs and Buildings"
-supported_version="v4.2.*"
+supported_version="v4.3.*"
 remote_file_id="2790584642"

@@ -330,14 +330,6 @@ building_eutab_gaia_district = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_domination_imperious_architecture }
-		}
-		planet_housing_add = 100
-	}
-
-	triggered_planet_modifier = {
 		potential = { always = yes }
 		planet_housing_add = 1
 		multiplier = modifier:eutab_gaia_district_housing_add
@@ -489,10 +481,10 @@ building_eutab_foundation_institute = {
 
 	planet_modifier = {
 		# same as building_institute owned by regular empires.
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
-		planet_researchers_consumer_goods_upkeep_add = 1.5
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
+		planet_researchers_consumer_goods_upkeep_add = 1
 	}
 
 	prerequisites = {
@@ -556,9 +548,9 @@ building_eutab_hypercomputing_complex = {
 
 	# same as building_supercomputer.
 	planet_modifier = {
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -568,7 +560,7 @@ building_eutab_hypercomputing_complex = {
 				is_gestalt = no
 			}
 		}
-		planet_researchers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -577,7 +569,7 @@ building_eutab_hypercomputing_complex = {
 				is_machine_empire = yes
 			}
 		}
-		planet_researchers_energy_upkeep_add = 3
+		planet_researchers_energy_upkeep_add = 2
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -586,7 +578,13 @@ building_eutab_hypercomputing_complex = {
 				is_hive_empire = yes
 			}
 		}
-		planet_researchers_minerals_upkeep_add = 4
+		planet_researchers_minerals_upkeep_add = 2
+	}
+
+	inline_script = {
+		script = "jobs/politician_add_from_civic"
+		AMOUNT = @building_static_jobs
+		CIVIC = civic_technocracy
 	}
 
 	prerequisites = {
@@ -1100,7 +1098,7 @@ building_eutab_planetary_parliament = {
 					has_technology = tech_eutab_dd_implants
 				}
 			}
-			unity = 0.02
+			unity = 0.015
 			multiplier = trigger:pop_amount
 		}
 	}
@@ -1519,16 +1517,6 @@ building_eutab_xeno_district = {
 	}
 
 	inline_script = "buildings/eutab_dev_structures_modifiers"
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_domination_imperious_architecture }
-		}
-		modifier = {
-			planet_housing_add = 100
-		}
-	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1984,10 +1972,10 @@ building_eutab_genetic_data_vault = {
 		job_eutab_genetic_chronicler_add = 200
 		job_eutab_genetic_chronicler_per_pop = 0.02
 		# same as building_institute owned by regular empires.
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
-		planet_researchers_consumer_goods_upkeep_add = 1.5
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
+		planet_researchers_consumer_goods_upkeep_add = 1
 	}
 
 	prerequisites = {
@@ -2066,10 +2054,10 @@ building_eutab_afterlife_vault = {
 
 	planet_modifier = {
 		# same as building_institute owned by regular empires.
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
-		planet_researchers_consumer_goods_upkeep_add = 1.5
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
+		planet_researchers_consumer_goods_upkeep_add = 1
 	}
 
 	country_modifier = {
@@ -2443,6 +2431,7 @@ building_eutab_adv_clone_vats = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_tradition = tr_genetics_efficient_cloning
 			}
@@ -2607,7 +2596,7 @@ building_eutab_symbol_unity = {
 			energy = @b2_upkeep
 		}
 		produces = {
-			unity = 15
+			unity = 12
 		}
 	}
 
@@ -2898,7 +2887,7 @@ building_eutab_hive_alpha_node = {
 		physics_research = 20
 		society_research = 20
 		engineering_research = 20
-		unity = 23
+		unity = 16
 		alloys = 23
 		mult = value:eutab_ai_resource_production_adjustment_value
 	}
@@ -3395,7 +3384,6 @@ building_eutab_automation_sector = {
 				is_individual_machine = yes
 			}
 		}
-		NOT = { has_modifier = gestation_colony }
 	}
 
 	allow = {

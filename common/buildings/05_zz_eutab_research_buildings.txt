@@ -50,9 +50,9 @@ building_institute = {
 	}
 
 	planet_modifier = {
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -62,7 +62,7 @@ building_institute = {
 				is_gestalt = no
 			}
 		}
-		planet_researchers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -71,7 +71,7 @@ building_institute = {
 				is_machine_empire = yes
 			}
 		}
-		planet_researchers_energy_upkeep_add = 3
+		planet_researchers_energy_upkeep_add = 2
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -80,7 +80,13 @@ building_institute = {
 				is_hive_empire = yes
 			}
 		}
-		planet_researchers_minerals_upkeep_add = 4
+		planet_researchers_minerals_upkeep_add = 2
+	}
+
+	inline_script = {
+		script = "jobs/politician_add_from_civic"
+		AMOUNT = @building_static_jobs
+		CIVIC = civic_technocracy
 	}
 
 	prerequisites = {
@@ -162,9 +168,9 @@ building_supercomputer = {
 	}
 
 	planet_modifier = {
-		planet_physicists_physics_research_produces_add = 2
-		planet_biologists_society_research_produces_add = 2
-		planet_engineers_engineering_research_produces_add = 2
+		planet_physicists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_engineers_engineering_research_produces_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -174,7 +180,7 @@ building_supercomputer = {
 				is_gestalt = no
 			}
 		}
-		planet_researchers_consumer_goods_upkeep_add = 1.5
+		planet_researchers_consumer_goods_upkeep_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -183,7 +189,7 @@ building_supercomputer = {
 				is_machine_empire = yes
 			}
 		}
-		planet_researchers_energy_upkeep_add = 3
+		planet_researchers_energy_upkeep_add = 2
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -192,7 +198,7 @@ building_supercomputer = {
 				is_hive_empire = yes
 			}
 		}
-		planet_researchers_minerals_upkeep_add = 4
+		planet_researchers_minerals_upkeep_add = 2
 	}
 
 	prerequisites = {

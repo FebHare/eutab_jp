@@ -31,7 +31,7 @@ eutab_master_bio = {
 	resources = {
 		category = planet_eutab_master_bio
 		produces = {
-			society_research = 10
+			society_research = 5
 			exotic_gases = 1
 		}
 		upkeep = {
@@ -114,7 +114,7 @@ eutab_minor_noble = {
 	resources = {
 		category = planet_eutab_minor_noble
 		produces = {
-			unity = 3
+			unity = 2.5
 		}
 		upkeep = {
 			consumer_goods = 1.5
@@ -127,7 +127,7 @@ eutab_minor_noble = {
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 2
+		country_naval_cap_add = 1
 	}
 
 	weight = {
@@ -202,7 +202,7 @@ eutab_gladiator = {
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 3
+		country_naval_cap_add = 2
 	}
 
 	# pop_modifier = {
@@ -319,8 +319,8 @@ eutab_anthro = {
 	resources = {
 		category = planet_eutab_anthro
 		produces = {
-			unity = 4
-			society_research = 3
+			unity = 3
+			society_research = 1.5
 			trade = 3
 		}
 		upkeep = {
@@ -404,7 +404,7 @@ eutab_ranger = {
 	resources = {
 		category = planet_eutab_ranger
 		produces = {
-			unity = 3
+			unity = 2.5
 			trade = 3
 		}
 	}
@@ -484,7 +484,7 @@ eutab_judge = {
 	resources = {
 		category = planet_enforcers
 		produces = {
-			unity = 3
+			unity = 2.5
 		}
 		upkeep = {
 			alloys = 0.5
@@ -494,7 +494,7 @@ eutab_judge = {
 				exists = owner
 				owner = { has_valid_civic = civic_police_state }
 			}
-			unity = 2
+			unity = 1.5
 		}
 		upkeep = {
 			trigger = {
@@ -696,7 +696,7 @@ eutab_caretaker = {
 	resources = {
 		category = planet_eutab_caretaker
 		upkeep = {
-			unity = 4
+			unity = 3
 			energy = 8
 		}
 	}
@@ -774,7 +774,7 @@ eutab_genetic_chronicler = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			society_research = 6
+			society_research = 3
 		}
 	}
 
@@ -863,7 +863,7 @@ eutab_shroud_lord = {
 	resources = {
 		category = planet_bureaucrats
 		produces = {
-			unity = 4
+			unity = 3
 			sr_zro = 0.1
 		}
 	}

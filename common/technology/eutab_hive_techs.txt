@@ -197,9 +197,6 @@ tech_eutab_h_brain_caste = {
 		has_ascension_perk = ap_technological_ascendancy
 	}
 	modifier = {
-		# planet_researchers_physics_research_produces_add = 1
-		# planet_researchers_society_research_produces_add = 1
-		# planet_researchers_engineering_research_produces_add = 1
 		planet_physicists_physics_research_produces_add = 1
 		planet_biologists_society_research_produces_add = 1
 		planet_engineers_engineering_research_produces_add = 1

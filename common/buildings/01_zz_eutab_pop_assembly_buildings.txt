@@ -21,8 +21,7 @@ building_machine_assembly_complex = {
 				is_individual_machine = yes
 			}
 		}
-		NOR = {
-			has_modifier = gestation_colony
+		NOT = {
 			has_modifier = resort_colony
 		}
 	}
@@ -320,6 +319,7 @@ building_clone_vats = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = yes
 				NOT = {
@@ -345,6 +345,7 @@ building_clone_vats = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
+			exists = owner
 			owner = {
 				has_cloning_tradition = yes
 				has_tradition = tr_genetics_efficient_cloning

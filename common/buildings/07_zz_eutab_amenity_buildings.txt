@@ -56,18 +56,6 @@ building_paradise_dome = {
 		planet_amenities_add = 3000
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_domination_imperious_architecture
-			}
-		}
-		modifier = {
-			planet_housing_add = 100
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {

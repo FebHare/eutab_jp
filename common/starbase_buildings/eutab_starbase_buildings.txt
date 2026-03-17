@@ -105,7 +105,7 @@ eutab_monastery = {
 			alloys = 100
 		}
 		produces = {
-			unity = 6
+			unity = 4.5
 		}
 		produces = {
 			trigger = {
@@ -288,7 +288,7 @@ eutab_cultural_freeport = {
 			alloys = 100
 		}
 		produces = {
-			unity = 8
+			unity = 6
 			energy = 4
 		}
 	}
@@ -334,7 +334,7 @@ eutab_battle_sphere = {
 			alloys = 100
 		}
 		produces = {
-			unity = 5
+			unity = 4
 		}
 		upkeep = {
 			energy = 4
