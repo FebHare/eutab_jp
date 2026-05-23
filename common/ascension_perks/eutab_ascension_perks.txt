@@ -1,0 +1,69 @@
+ap_eutab_evolved_engineering = {
+	on_enabled = {
+		add_research_option = tech_eutab_m_adaptation_mastery
+		hidden_effect = {
+			country_event = {
+				id = eutab_events.101
+			}
+		}
+	}
+	potential = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+		NOT = { has_ascension_perk = ap_eutab_evolved_engineering }
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "requires_ap_synthetic_age"
+			has_ascension_perk = ap_synthetic_age
+		}
+		custom_tooltip = {
+			fail_text = "requires_technology_nanite_assemblers"
+			has_technology = tech_nanite_assemblers
+		}
+	}
+	modifier = {
+		description = ap_eutab_evolved_engineering_desc
+		description_parameters = {
+			POINTS = 3
+			COST_MULT = -0.25
+		}
+		MACHINE_species_trait_points_add = 3
+		modify_species_cost_mult = -0.25
+	}
+	ai_weight = {
+		factor = 100
+	}
+}
+
+ap_eutab_mind_matter = {
+	on_enabled = {
+		add_research_option = tech_eutab_hive_alpha_node
+		custom_tooltip = ap_eutab_mind_matter_mod_desc
+		hidden_effect = {
+			set_country_flag = eutab_mindweb_efficiency_mechanic_enabled
+			country_event = {
+				id = eutab_events.102
+			}
+		}
+	}
+	potential = {
+		is_hive_empire = yes
+		NOT = { has_ascension_perk = ap_eutab_mind_matter }
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_eu_hive_neuron_cluster"
+			has_technology = tech_eutab_h_beta_node
+		}
+	}
+	ai_weight = {
+		factor = 100
+	}
+}

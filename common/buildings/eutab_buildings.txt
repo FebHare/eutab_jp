@@ -650,16 +650,31 @@ building_eutab_grand_hall_justice = {
 		job_eutab_judge_add = 600
 	}
 
+	# Telepath (or dystopian variant) job.
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
 				has_technology = "tech_telepathy"
+				NOT = {
+					has_valid_civic = civic_dystopian_society
+				}
 			}
 		}
 		modifier = {
 			job_telepath_add = 200
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = "tech_telepathy"
+				has_valid_civic = civic_dystopian_society
+			}
+		}
+		job_dystopian_telepath_add = 300
 	}
 
 	prerequisites = {
@@ -805,10 +820,32 @@ building_eutab_shroud_ministry = {
 	}
 
 	planet_modifier = {
-		job_telepath_add = 300
-		# job_clerk_per_pop = 0.05
+		# job_telepath_add = 300
 		job_bureaucrat_per_pop = 0.025
 		planet_max_districts_add = 1
+	}
+
+	# Telepath (or dystopian variant) job.
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = {
+					has_valid_civic = civic_dystopian_society
+				}
+			}
+		}
+		job_telepath_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_dystopian_society
+			}
+		}
+		job_dystopian_telepath_add = 300
 	}
 
 	triggered_planet_modifier = {
