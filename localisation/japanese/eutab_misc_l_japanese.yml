@@ -26,7 +26,7 @@
  eutab_janissary_army: "イェニチェリ部隊"
  eutab_janissary_army_plural: "$eutab_janissary_army$"
  eutab_janissary_army_desc: "征服した敵や捕虜にした敵から育てられた独特の兵士階級で、現在は軍事カーストの一員として、厳しい規律と支配者への完全な忠誠心を持っている。"
- requirement_eutab_non_majority_slave: "$TRIGGER_FAIL$この£planet£ $planet$に£pop_cat_slave£ §Y$pop_cat_slave_plural$§!がいない。"
+ requirement_eutab_non_majority_slave: "$TRIGGER_FAIL$この£planet£ $planet$に£slavery£ §Y$pop_cat_slave_plural$§!がいない。"
  eutab_mindlink_commando_army: "$tech_eutab_mindlink_commando$"
  eutab_mindlink_commando_army_plural: "$tech_eutab_mindlink_commando$"
  eutab_mindlink_commando_army_desc: "超能力を使った厳しい戦術訓練を受けるために、侵攻軍から最高の隊員が選ばれる。合格者は、敵の重要な位置で精密な作戦を実施できるよう、クローン分隊を保有する。"

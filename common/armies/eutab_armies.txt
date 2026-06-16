@@ -94,7 +94,7 @@ eutab_janissary_army = {
 			text = "requirement_eutab_non_majority_slave"
 			any_owned_pop_group = {
 				AND = {
-					is_pop_category = slave
+					is_enslaved = yes
 					NOT = { is_same_species = root.owner }
 				}
 			}

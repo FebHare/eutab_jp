@@ -21,29 +21,22 @@ building_hydroponics_farm = {
 		}
 		NOT = { is_planet_class = pc_machine }
 		NOT = { has_modifier = resort_colony }
+		OR = {
+			has_carrier_flag = ignore_ai_building_limitations
+			owner = { is_ai = no }
+			# AI is allowed to build up to two of these.
+			num_buildings = { type = building_hydroponics_farm value < 2 }
+		}
 	}
 	destroy_trigger = {
 		exists = owner
-		OR = {
-			owner = {
-				OR = {
-					AND = {
-						is_ai = yes
-						country_uses_food = no
-					}
-					is_wilderness_empire = yes
-				}
-			}
-			planet = {
-				NOT = { is_planet_class = pc_habitat }
-				free_building_slots = 0
-				owner = {
+		owner = {
+			OR = {
+				AND = {
 					is_ai = yes
-					has_monthly_income = {
-						resource = food
-						value > 100
-					}
+					country_uses_food = no
 				}
+				is_wilderness_empire = yes
 			}
 		}
 	}
@@ -55,8 +48,12 @@ building_hydroponics_farm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = volatile_motes
+			COST = @b1_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
 		}
 		upkeep = {
 			energy = 2
@@ -66,8 +63,7 @@ building_hydroponics_farm = {
 		"tech_hydroponics"
 	}
 	
-	# Static jobs building
-	ai_weight_coefficient = 0.0
+	ai_weight_coefficient = @static_jobs_ai_weight_coefficient
 
 	# EUTAB
 	upgrades = {

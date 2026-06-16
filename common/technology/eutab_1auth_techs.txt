@@ -237,7 +237,7 @@ tech_eutab_breeding_loyalty = {
 	gateway = eu_fanatic
 	modifier = {
 		pop_slave_bonus_workforce_mult = 0.1
-		pop_cat_slave_political_power = -0.33
+		pop_slave_political_power = -0.33
 	}
 }
 
@@ -274,10 +274,6 @@ tech_eutab_virtual_viceroys = {
 	potential = {
 		has_ethic = ethic_fanatic_authoritarian
 		has_cybernetic_ascension = yes
-		# OR = {
-		# 	has_ascension_perk = ap_the_flesh_is_weak
-		# 	has_ascension_perk = ap_synthetic_evolution
-		# }
 	}
 	gateway = eu_fanatic
 	modifier = {
@@ -303,10 +299,6 @@ tech_eutab_machine_hierachy = {
 	potential = {
 		has_ethic = ethic_fanatic_authoritarian
 		has_synthetic_ascension = yes
-		# OR = {
-		# 	has_ascension_perk = ap_the_flesh_is_weak
-		# 	has_ascension_perk = ap_synthetic_evolution
-		# }
 	}
 	gateway = eu_fanatic
 	modifier = {

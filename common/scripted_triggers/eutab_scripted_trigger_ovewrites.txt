@@ -16,10 +16,7 @@ has_any_farming_district_or_building = {
 		has_district = district_farming
 		has_district = district_orchard_forests
 		has_building = building_hydroponics_farm
-		has_zone = { zone = zone_food_ring_world }
-		has_zone = { zone = zone_food_hive }
-		has_zone = { zone = zone_exotic_gases_hive }
-		has_zone = { zone = zone_exotic_gases_nexus }
+		has_any_agriculture_zone = yes
 		#EUTAB
 		eutab_has_farming_building = yes
 	}

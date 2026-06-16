@@ -1,0 +1,230 @@
+namespace = eutab_events
+
+# Table of Contents
+# 1 - 100: Utilities
+# 101 - 200: Ascension Perk stuff
+# 201 - 300: Building stuff
+
+# Set flag for compatibility
+# on_action: on_game_start
+event = {
+	id = eutab_events.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = eutab_active }
+	}
+	immediate = {
+		set_global_flag = eutab_active
+	}
+}
+
+# Fix Neural Mass Cultivation mid-game
+# on_action: on_single_player_save_game_load
+event = {
+	id = eutab_events.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { has_ascension_perk = ap_eutab_mind_matter }
+			if = {
+				limit = { NOT = { has_country_flag = eutab_mindweb_efficiency_mechanic_enabled } }
+				set_country_flag = eutab_mindweb_efficiency_mechanic_enabled
+			}
+			if = {
+				limit = { is_ai = yes }
+				give_tech_no_error_effect = {
+					MESSAGE = no
+					TECH = tech_eutab_hive_ai_ap_helper
+				}
+			}
+		}
+	}
+}
+
+# Machine AP
+country_event = {
+	id = eutab_events.101
+	title = "eutab_events.101.title"
+	desc = "eutab_events.101.desc"
+	picture = GFX_evt_eutab_machine_evolution
+	show_sound = event_evolution_mastery
+	is_triggered_only = yes
+	option = {
+		name = ACKNOWLEDGED
+		tooltip = {
+			add_research_option = tech_eutab_m_adaptation_mastery
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Hive Mind AP
+country_event = {
+	id = eutab_events.102
+	title = eutab_events.102.title
+	desc = {
+		trigger = { is_homicidal = no }
+		text = eutab_events.102.desc.normal
+	}
+	desc = {
+		trigger = { is_homicidal = yes }
+		text = eutab_events.102.desc.swarm
+	}
+	picture = GFX_evt_eutab_hive_evolution
+	show_sound = event_evolution_mastery
+	is_triggered_only = yes
+
+	option = {
+		name = "eutab_events.102.option.normal"
+		trigger = { is_homicidal = no }
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "eutab_events.102.option.swarm"
+		trigger = { is_homicidal = yes }
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		tooltip = {
+			add_research_option = tech_eutab_hive_alpha_node
+		}
+		if = {
+			limit = { is_ai = yes }
+			give_technology = { tech = tech_eutab_hive_ai_ap_helper message = no  }
+		}
+	}
+}
+
+# Gatekeeper event for eutab.10
+# on_action: on_decade_pulse_country
+country_event = {
+	id = eutab_events.201
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_technology = tech_eutab_ins_exo_design
+		any_owned_planet = { has_active_building = building_eutab_ins_exo_design }
+	}
+	immediate = {
+		random_owned_planet = {
+			limit = { has_active_building = building_eutab_ins_exo_design }
+			carrier_event = { id = eutab_events.202 days = 1 random = 1799 } # Days = 0 means instant regardless of random?
+		}
+	}
+}
+
+# carrier_event = {
+# 	id = eutab_events.202
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	trigger = {
+# 		exists = planet_owner
+# 		has_active_building = building_eutab_ins_exo_design
+# 	}
+#
+# 	immediate = {
+# 		random_playable_country = {
+# 			limit = { has_communications = root.planet_owner }
+# 			save_event_target_as = eutab_ins_exo_design_target
+# 		}
+# 		planet_owner = {
+# 			# if = {
+# 			# 	limit = {
+# 			# 		exists = event_target:eutab_ins_exo_design_target
+# 			# 	}
+# 			# }
+# 			create_message = {
+# 				type = MESSAGE_TYPE_EUTAB_INS_EXO_DESIGN_REWARD_NEW_RESEARCH
+# 				localization = MESSAGE_EUTAB_INS_EXO_DESIGN_REWARD_NEW_RESEARCH_DESC
+# 				days = 30
+# 				target = root
+# 				variable = {
+# 					type = name
+# 					localization = PLANET
+# 					scope = this
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# Institute of Exo Design event
+carrier_event = {
+	id = eutab_events.202
+	title = eutab_events.202.title
+	desc = eutab_events.202.desc
+	picture = GFX_evt_engineering_research
+	show_sound = event_activating_unknown_technology
+	is_triggered_only = yes
+	trigger = {
+		exists = owner
+		has_active_building = building_eutab_ins_exo_design
+	}
+	immediate = {
+		random_playable_country = {
+			limit = {
+				exists = this
+				has_communications = root.owner
+			}
+			save_event_target_as = eutab_ins_exo_design_target
+		}
+	}
+	option = {
+		name = BREAKTHROUGH
+		owner = {
+			if = {
+				limit = {
+					exists = event_target:eutab_ins_exo_design_target
+					can_copy_random_tech_from = { who = event_target:eutab_ins_exo_design_target }
+				}
+				copy_random_tech_from = {
+					who = event_target:eutab_ins_exo_design_target
+					progress = 0.03
+				}
+			}
+			else = {
+				locked_random_list = {
+					1 = {
+						add_monthly_resource_mult = {
+							resource = physics_research
+							value = 2.5
+							min = @tier1researchmin
+							max = @tier5researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = society_research
+							value = 2.5
+							min = @tier1researchmin
+							max = @tier5researchmax
+						}
+					}
+					1 = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = 2.5
+							min = @tier1researchmin
+							max = @tier5researchmax
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

@@ -33,11 +33,11 @@ leader_trait_eutab_superior_build = {
 		official_exp_gain = 0.33
 	}
 	planet_modifier = {
-		pop_category_slave_produces_mult = 0.1
+		pop_slave_bonus_workforce_mult = 0.1
 		planet_crime_add = -7.5
 	}
 	sector_modifier = {
-		pop_category_slave_produces_mult = 0.05
+		pop_slave_bonus_workforce_mult = 0.05
 		planet_crime_add = -5
 	}
 	leader_potential_add = {

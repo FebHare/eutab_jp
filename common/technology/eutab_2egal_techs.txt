@@ -134,7 +134,7 @@ tech_eutab_adv_suppresion_fields = {
 	}
 	gateway = eu_nihilistic
 	modifier = {
-		pop_category_slave_upkeep_mult = -0.05
+		planet_pops_enslaved_upkeep_mult = -0.05
 	}
 	prereqfor_desc = {
 		custom = {

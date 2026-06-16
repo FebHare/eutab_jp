@@ -11,5 +11,5 @@ planet_researchers = {
 		# EUTAB
 		produces
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }

@@ -25,7 +25,7 @@
  eutab_janissary_army: "Janissary"
  eutab_janissary_army_plural: "Janissaries"
  eutab_janissary_army_desc: "A unique class of solider, raised from conquered or captured enemies they now live as a part of the military caste, a life of strict discipline and total loyalty to the ruler."
- requirement_eutab_non_majority_slave: "$TRIGGER_FAIL$No £pop_cat_slave£ §Y$pop_cat_slave_plural$§! present on the £planet£ $planet$."
+ requirement_eutab_non_majority_slave: "$TRIGGER_FAIL$No £slavery£ §Y$pop_cat_slave_plural$§! present on the £planet£ $planet$."
  eutab_mindlink_commando_army: "$tech_eutab_mindlink_commando$"
  eutab_mindlink_commando_army_plural: "Mindlink Commando Squads"
  eutab_mindlink_commando_army_desc: "The best are selected from our assault armies to undergo rigorous psionic based tactics training. The successful candidates then take possession of cloned squads for surgical operations at key enemy positions."

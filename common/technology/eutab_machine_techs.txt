@@ -329,7 +329,7 @@ tech_eutab_m_processing_tests = {
 		eutab_has_nihilistic_acquisition_or_similar = yes
 	}
 	modifier = {
-		pop_category_slave_energy_produces_add = 1
+		planet_pops_enslaved_energy_produces_add = 1
 		pop_category_purge_society_research_produces_add = 1
 		pop_category_purge_energy_produces_add = 2
 	}

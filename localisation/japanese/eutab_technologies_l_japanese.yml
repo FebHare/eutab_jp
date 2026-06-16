@@ -174,7 +174,7 @@
  tech_eutab_machine_hierachy: "機械の階層"
  tech_eutab_machine_hierachy_desc: "我々の機械モデルの中核は、他のいかなる指令よりも秩序と権威を尊重しなければならず、その帰結として他よりも高い基準で作らなければならないものが必要だ。"
  TECH_UNLOCK_EUTAB_HIERACHY_TITLE: "§H役人特性をアンロック：§!$leader_trait_eutab_superior_build$"
- TECH_UNLOCK_EUTAB_HIERACHY_DESC: "§E$leader_trait_eutab_superior_build$§!\n §Yロボットのリーダーのみ§!\n$mod_official_exp_gain$：§G+33%§\n$mod_pop_category_slave_produces_mult$：§G+10%§!\n$PLANET_CRIME_TITLE$：§G-25%§!"
+ TECH_UNLOCK_EUTAB_HIERACHY_DESC: "§E$leader_trait_eutab_superior_build$§!\n §Yロボットのリーダーのみ§!\n$mod_official_exp_gain$：§G+33%§\n$mod_pop_slave_bonus_workforce_mult$：§G+10%§!\n$PLANET_CRIME_TITLE$：§G-25%§!"
  tech_eutab_shroud_ministry: "力の帝国"
  tech_eutab_shroud_ministry_desc: "特殊能力者のためのホールで、彼らの自然ならざる能力をコロニー世界全体の利益のために強化できる。"
  EUTAB_INTERIOR_UPGRADE_TITLE: "§Hアップグレードをアンロック：§!$building_eutab_interior_ministry$§Yないし§!$building_eutab_imperial_residence$"

@@ -171,7 +171,7 @@
  tech_eutab_machine_hierachy: "Machine Hierarchy"
  tech_eutab_machine_hierachy_desc: "The core of our machine models must respect order and authority above all other directives, logically some must be made to a higher standard than others."
  TECH_UNLOCK_EUTAB_HIERACHY_TITLE: "§HUnlocks Official Trait:§! $leader_trait_eutab_superior_build$"
- TECH_UNLOCK_EUTAB_HIERACHY_DESC: "§E$leader_trait_eutab_superior_build$§!\n §YRobotic Leaders Only§!\n $mod_official_exp_gain$: §G+33%§!\n $mod_pop_category_slave_produces_mult$: §G+10%§!\n $PLANET_CRIME_TITLE$: §G-25%§!"
+ TECH_UNLOCK_EUTAB_HIERACHY_DESC: "§E$leader_trait_eutab_superior_build$§!\n §YRobotic Leaders Only§!\n $mod_official_exp_gain$: §G+33%§!\n $mod_pop_slave_bonus_workforce_mult$: §G+10%§!\n $PLANET_CRIME_TITLE$: §G-25%§!"
  tech_eutab_shroud_ministry: "Empire of Power"
  tech_eutab_shroud_ministry_desc: "A hall for the privileged gifted, from which their unnatural abilities may be enhanced to the benefit of an entire colony-world."
  EUTAB_INTERIOR_UPGRADE_TITLE: "§HUnlocks Upgrade For:§! $building_eutab_interior_ministry$ §YOR§! $building_eutab_imperial_residence$"

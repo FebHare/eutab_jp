@@ -1,0 +1,95 @@
+# Checks if the given country is xenophobic but NOT pacifist
+# Scopes: this = country
+is_xenophobe_not_pac = {
+	is_xenophobe = yes
+	is_pacifist = no
+}
+
+# Checks if the given country is xenophobic AND pacifist
+# Scopes: this = country
+is_xenophobe_and_pac = {
+	is_xenophobe = yes
+	is_pacifist = yes
+}
+
+# Checks if a given country has an autocratic authority AND authoritarian ethics
+# Scopes: this = country
+eu_auth_imp = {
+	is_autocracy = yes
+	is_authoritarian = yes # Gestalts can't have authoritarian ethics, so this should stop them from getting techs they shouldn't
+}
+
+# Checks if a given country is authoritarian but NOT an autocratic authority
+# Scopes: this = country
+eu_auth_other = {
+	is_autocracy = no
+	is_authoritarian = yes
+}
+
+# Checks if a given planet is a Hive World (or something similar from other mods), used for Hive AP buildings
+# Scopes: this = planet
+eutab_is_hive_or_similar_planet = {
+	OR = {
+		has_carrier_flag = eutab_hive_world_override
+		is_planet_class = pc_hive
+		merg_is_hive_world = yes
+		pd_is_planet_class_hive = yes
+		is_pd_uncommon_hive = yes
+		is_pd_uncommon_hive_arc = yes
+	}
+}
+
+# Checks if a given planet is a Hive World (or something similar from other mods), used for Hive AP buildings
+# Scopes: this = planet
+eutab_is_machine_world_or_similar = {
+	OR = {
+		has_carrier_flag = eutab_machine_world_override
+		is_planet_class = pc_machine
+		# ...
+	}
+}
+
+# Checks if the country has voidborne, or if they have an origin/civic that does something similar
+# Scopes: this = country
+eutab_has_voidborne_or_similar = {
+	OR = {
+		has_ascension_perk = ap_voidborn
+		has_origin = origin_void_dwellers
+	}
+}
+
+# Checks if the country has nihilistic acquisition, or if they have an origin/civic that does something similar
+# Scopes: this = country
+eutab_has_nihilistic_acquisition_or_similar = {
+	OR = {
+		has_ascension_perk = ap_nihilistic_acquisition
+		has_valid_civic = civic_barbaric_despoilers
+		has_origin = origin_slavers
+	}
+}
+
+# Checks if the country has mastery of nature, or if they have an origin/civic that does something similar
+# Scopes: this = country
+eutab_has_mastery_of_nature_or_similar = {
+	OR = {
+		has_ascension_perk = ap_mastery_of_nature
+		is_environmental_architects_empire = yes
+	}
+}
+
+# Checks if the country has mind over matter, or if they have an origin/civic that does something similar
+# Scopes: this = country
+eutab_has_mind_over_matter_or_similar = {
+	OR = {
+		has_psionic_ascension = yes
+	}
+}
+
+# Checks if the country has the Gene Banks tech, or if they have an origin/civic that does something similar
+# Scopes: this = country
+eutab_has_gene_banks_or_skip = {
+	OR = {
+		has_technology = tech_gene_banks
+		is_natural_design_empire = yes
+	}
+}

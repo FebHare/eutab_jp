@@ -29,6 +29,12 @@ building_paradise_dome = {
 			has_modifier = slave_colony
 			has_modifier = penal_colony
 		}
+		owner? = {
+			OR = {
+				NOT = { has_origin = origin_forever_cruise }
+				has_country_flag = forever_cruise_over
+			}
+		}
 	}
 
 	allow = {
@@ -40,6 +46,7 @@ building_paradise_dome = {
 		OR = {
 			owner = { is_regular_empire = no }
 			owner = { has_valid_civic = civic_shared_burden }
+			owner = { has_origin = origin_forever_cruise }
 			has_modifier = slave_colony
 		}
 	}
@@ -58,8 +65,14 @@ building_paradise_dome = {
 
 	resources = {
 		category = planet_buildings
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = @b2_minerals
+			NOMADIC_COST_MULT = @nomadic_minerals_to_strategic_ratio
+		}
 		cost = {
-			minerals = @b2_minerals
 			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {

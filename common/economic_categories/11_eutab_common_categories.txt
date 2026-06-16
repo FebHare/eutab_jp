@@ -8,23 +8,10 @@
 # 	modifier_category = pop_job
 # }
 
-pop_category_slave = {
-	parent = planet_pops
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-	modifier_category = pop_job
-}
-
 pop_category_purge = {
 	parent = planet_pops
 	generate_add_modifiers = {
 		produces
 	}
-	modifier_category = pop_job
+	modifier_category = colony
 }
