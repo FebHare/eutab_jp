@@ -1,4 +1,5 @@
-# # This file's name must be after "02_pop_categories_categories.txt".
+# This file's name must be after "02_pop_categories_categories.txt" or "gpm_pop_categories_categories.txt".
+# "Guilli's Planet Modifiers and Features" and "Guilli's Technologies" have planet_pops overwriting also, so I am worried about mod confliction. That said, EUTAB version doesn't rise any error log. Is it safe?
 planet_pops = {
 	parent = planets
 	generate_mult_modifiers = {
