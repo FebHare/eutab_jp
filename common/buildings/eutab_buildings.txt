@@ -3463,6 +3463,7 @@ building_eutab_automation_sector = {
 			OR = {
 				is_machine_empire = yes
 				is_individual_machine = yes
+				is_hive_empire_with_machines = yes
 			}
 		}
 	}
@@ -3519,7 +3520,10 @@ building_eutab_automation_sector = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			owner = { is_robot_empire = no }
+			owner = {
+				is_robot_empire = no
+				is_hive_empire_with_machines = no
+			}
 			AND = {
 				owner = { is_ai = yes }
 				free_district_slots = 0
