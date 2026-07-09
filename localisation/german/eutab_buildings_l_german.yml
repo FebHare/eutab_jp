@@ -61,7 +61,7 @@
  building_eutab_expo_guard_desc: "['concept_eutab_developmental_structure']\n\nA station-house for the exploratory guard."
  building_eutab_xeno_sub_ins: "Xeno Submission Institute"
  building_eutab_xeno_sub_ins_desc: "Studies performed here on live test subjects will teach us the nuances of each of the species we encounter. Defining their limits and psychology will help maximize their use to the people."
- building_eutab_xeno_sub_ins_slave_effect: "\nIf built on a §Y$slave_colony$§!:\n §G+1§! $job_eutab_anthro$ Job per §Y50§! Pops\n £physics£ £society£ £engineering£ $research$ from £slavery£ $pop_cat_slave_plural$: §G+50%§!"
+ building_eutab_xeno_sub_ins_slave_effect: "\n£physics£ £society£ £engineering£ $research$：§G+1§! per §Y300§! £slavery£ $pop_cat_slave_plural$\nIf built on a §Y$slave_colony$§!:\n §G+1§! $job_eutab_anthro$ Job per §Y50§! Pops\n £physics£ £society£ £engineering£ $research$ from £slavery£ $pop_cat_slave_plural$: §G+50%§!"
 
  ### XENOPHILE ###
  building_eutab_xeno_district: "Xeno Cultural Quarter"

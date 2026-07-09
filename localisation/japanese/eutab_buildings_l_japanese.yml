@@ -62,7 +62,7 @@
  building_eutab_expo_guard_desc: "['concept_eutab_developmental_structure']\n\n予備警備隊の駐留施設。"
  building_eutab_xeno_sub_ins: "異星人服従機関"
  building_eutab_xeno_sub_ins_desc: "生きた被検体に対してここで行われている研究により、遭遇した種族のそれぞれの細かい違いがわかるだろう。その限界と心理がわかれば、民衆のために最大限に活用できるようになる。"
- building_eutab_xeno_sub_ins_slave_effect: "§Y$slave_colony$§!で建設されたら：\n　§Y50§! POPごとに£job_eutab_anthro£ $job_eutab_anthro$の職業枠§G+1§!\n　£slavery£ $pop_cat_slave_plural$からの£physics£ £society£ £engineering£ $research$：§G+50%§!"
+ building_eutab_xeno_sub_ins_slave_effect: "\n§Y300§! £slavery£ $pop_cat_slave_plural$あたり£physics£ £society£ £engineering£ $research$：§G+1§!\n §Y$slave_colony$§!で建設されたら：\n　§Y50§! POPごとに£job_eutab_anthro£ $job_eutab_anthro$の職業枠§G+1§!\n　£slavery£ $pop_cat_slave_plural$からの£physics£ £society£ £engineering£ $research$：§G+50%§!"
 
  ### XENOPHILE ###
  building_eutab_xeno_district: "異星文化地区"

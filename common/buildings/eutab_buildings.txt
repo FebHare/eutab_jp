@@ -1486,22 +1486,22 @@ building_eutab_xeno_sub_ins = {
 
 	planet_modifier = {
 		job_eutab_anthro_add = 200
-		planet_pops_enslaved_physics_research_produces_add = 0.34
-		planet_pops_enslaved_society_research_produces_add = 0.34
-		planet_pops_enslaved_engineering_research_produces_add = 0.34
 		pop_slave_happiness = -0.2
 	}
 
 	triggered_planet_modifier = {
 		potential = { has_modifier = slave_colony }
 		job_eutab_anthro_per_pop = 0.02
-		planet_pops_enslaved_physics_research_produces_mult = 0.5
-		planet_pops_enslaved_society_research_produces_mult = 0.5
-		planet_pops_enslaved_engineering_research_produces_mult = 0.5
 	}
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+			multiplier = value:eutab_research_from_building_eutab_xeno_sub_ins
+		}
 		cost = {
 			minerals = @b2_minerals
 			exotic_gases = @b2_rare_cost

@@ -13,3 +13,31 @@ planet_researchers = {
 	}
 	modifier_category = colony
 }
+
+planet_organic_batteries = {
+	parent = planet_jobs_productive
+	modifier_category = colony
+#	 Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_technician
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+
+	# EUTAB
+	triggered_produces_modifier = {
+		key = planet_organic_batteries
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+	}
+}
