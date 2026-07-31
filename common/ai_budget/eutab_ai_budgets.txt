@@ -1,0 +1,33 @@
+# So the AI can build clone vats + Hive AP buildings
+eutab_energy_expenditure_planets = {
+	resource = energy
+	type = expenditure
+	category = planets
+
+	potential = {
+		OR = {
+			has_ascension_perk = ap_engineered_evolution
+			has_technology = tech_eutab_h_beta_node
+		}
+	}
+
+	weight = {
+		weight = 0.15
+	}
+}
+
+# Expand Geothermal Tap Infrastructure decision needs motes
+eutab_volatile_motes_expenditures_decisions = {
+	resource = volatile_motes
+	type = expenditure
+	category = decisions
+
+	potential = {
+		has_technology = tech_eutab_geothermal_tap
+		any_owned_planet = { has_building = building_eutab_geothermal_tap }
+	}
+
+	weight = {
+		weight = 0.075
+	}
+}

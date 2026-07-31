@@ -1,11 +1,11 @@
 version="1.0"
-dependencies={
-	"EUTAB - Ethos Unique Techs and Buildings | Unofficial Update (3.14.X)"
-}
 tags={
-	"Translation"
+	"Fixes"
+	"Buildings"
+	"Economy"
+	"Technologies"
 }
 picture="thumbnail.png"
-name="[JP localize and modernization] EUTAB - Ethos Unique Techs and Buildings"
+name="EUTAB - Ethos Unique Techs and Buildings, 3rd Edition"
 supported_version="v4.4.*"
 remote_file_id="2790584642"
