@@ -30,7 +30,6 @@ eutab_mindlink_commando_army = {
 			NOR = {
 				has_trait = "trait_mechanical"
 				has_trait = "trait_machine_unit"
-				has_trait = "trait_limited_cybernetic"
 				is_sapient = no
 			}
 		}
@@ -109,7 +108,6 @@ eutab_janissary_army = {
 			NOR = {
 				has_trait = "trait_mechanical"
 				has_trait = "trait_machine_unit"
-				has_trait = "trait_limited_cybernetic"
 				is_sapient = no
 			}
 		}
@@ -150,7 +148,6 @@ eutab_clone_commando_pod = {
 			NOR = {
 				has_trait = "trait_mechanical"
 				has_trait = "trait_machine_unit"
-				has_trait = "trait_limited_cybernetic"
 				is_sapient = no
 			}
 		}

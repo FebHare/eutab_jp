@@ -307,7 +307,7 @@ building_clone_vats = {
 
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
-			owner = {
+			owner? = {
 				has_cloning_tradition = no
 			}
 		}

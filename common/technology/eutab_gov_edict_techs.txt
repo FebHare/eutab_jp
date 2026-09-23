@@ -77,7 +77,7 @@ tech_eutab_emergency_powers = {
 			has_authority = auth_corporate
 		}
 		OR = {
-			has_ascension_perk = ap_defender_of_the_galaxy
+			has_ambition = yes
 			has_ascension_perk = ap_galactic_contender
 		}
 	}
@@ -152,7 +152,7 @@ tech_eutab_graphic_propaganda = {
 		is_autocracy = yes
 		is_gestalt = no
 		OR = {
-			has_ascension_perk = ap_defender_of_the_galaxy
+			has_ambition = yes
 			eutab_has_nihilistic_acquisition_or_similar = yes
 		}
 	}

@@ -1,4 +1,4 @@
-version="1.0"
+version="1.1"
 tags={
 	"Fixes"
 	"Buildings"
@@ -7,5 +7,5 @@ tags={
 }
 picture="thumbnail.png"
 name="EUTAB - Ethos Unique Techs and Buildings, 3rd Edition"
-supported_version="v4.4.*"
+supported_version="v4.5.*"
 remote_file_id="2790584642"

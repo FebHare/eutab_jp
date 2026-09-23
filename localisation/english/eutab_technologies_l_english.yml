@@ -32,7 +32,7 @@
  tech_eutab_frontier_settlement_prefabs_1: "Optimised $building_eutab_dev_district$ Rollouts"
  tech_eutab_frontier_settlement_prefabs_1_desc: "After an examination of our current techniques, several areas involved with the construction of new $building_eutab_dev_district_plural$ were found to be lacking."
  tech_eutab_frontier_settlement_prefabs_2: "$building_eutab_dev_district$ Prefabs"
- tech_eutab_frontier_settlement_prefabs_2_desc: "Another examination showed that by including prefabs with $shipclass_colonizer$s, further improvements to the construction of new $building_eutab_dev_district_plural$ can be attained."
+ tech_eutab_frontier_settlement_prefabs_2_desc: "Another examination showed that by including prefabs with $colonizer_plural$, further improvements to the construction of new $building_eutab_dev_district_plural$ can be attained."
  tech_eutab_frontier_settlement_prefabs_3: "$building_eutab_dev_district$ Reorganisation"
  tech_eutab_frontier_settlement_prefabs_3_desc: "By changing the way we approach the construction of new $building_eutab_dev_district_plural$, further improvements can be found."
  tech_eutab_frontier_settlement_prefabs_4: "Developmental Apotheosis"
@@ -385,7 +385,7 @@
  tech_eutab_universal_needs: "Universal Needs"
  tech_eutab_universal_needs_desc: "The lack of want is key in avoiding conflict between beings. We must endeavor to satisfy this in both organic and synthetic citizens."
  tech_eutab_united_in_purpose: "Governing Council"
- tech_eutab_united_in_purpose_desc: "The Core of the Psi Corps leadership will be reorganised to ensure the continued stability and prosperity of our worlds."
+ tech_eutab_united_in_purpose_desc: "The Core of the $building_psi_corps$ leadership will be reorganised to ensure the continued stability and prosperity of our worlds."
  tech_eutab_ascemic_writing: "True Asemic Writing"
  tech_eutab_ascemic_writing_desc: "Communication is key to lasting peace and we have been made aware of a way to impart psionic energy in the form of emotions into written messages."
 

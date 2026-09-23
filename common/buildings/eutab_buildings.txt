@@ -468,6 +468,14 @@ building_eutab_foundation_institute = {
 	potential = {
 		exists = owner
 		owner = { has_ascension_perk = ap_technological_ascendancy }
+
+		OR = {
+			has_carrier_flag = ignore_ai_building_limitations
+			owner = {
+				is_ai = no
+			}
+			has_any_research_zone = yes
+		}
 	}
 
 	allow = {
@@ -2006,6 +2014,14 @@ building_eutab_genetic_data_vault = {
 		}
 		exists = owner
 		owner = { has_ethic = ethic_fanatic_pacifist }
+
+		OR = {
+			has_carrier_flag = ignore_ai_building_limitations
+			owner = {
+				is_ai = no
+			}
+			has_any_research_zone = yes
+		}
 	}
 
 	allow = {
@@ -2096,6 +2112,14 @@ building_eutab_afterlife_vault = {
 		}
 		exists = owner
 		owner = { has_ethic = ethic_fanatic_pacifist }
+
+		OR = {
+			has_carrier_flag = ignore_ai_building_limitations
+			owner = {
+				is_ai = no
+			}
+			has_any_research_zone = yes
+		}
 	}
 
 	allow = {
