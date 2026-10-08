@@ -2480,12 +2480,10 @@ building_eutab_adv_clone_vats = {
 		}
 	}
 
-	planet_modifier = {
-		fake_pop_growth_mod = 4.5
-	}
-
-	triggered_planet_pop_group_modifier_for_all = {
-		bonus_pop_growth = 4.5
+	inline_script = {
+		script = output/bonus_pop_growth
+		TRIGGER = "always = yes"
+		AMOUNT = 4.5
 	}
 
 	triggered_planet_modifier = {
